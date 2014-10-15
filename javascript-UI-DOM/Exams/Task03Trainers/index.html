@@ -1,0 +1,46 @@
+﻿<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Task 3 - Handlebars</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="authors">
+    </div>
+    <script id="authors-template" type='text/x-handlebars-template'>
+        {{#authors}}
+        <div class="box {{#if right}} right {{/if}}">
+            <div class="inner">
+                <p><img alt="{{name}}" src="{{image}}" width="100" height="133"></p>
+                <div>
+                    <h3>{{name}}</h3>
+                    <!-- Additional if statements are for sure. Some day template won't be look like now -->
+                    <p>
+                        {{#if titles.[0]}}
+                        {{{titles.[0]}}}
+                        {{/if}}
+                    </p>
+                    <p>
+                        {{#if titles.[1]}}
+                        {{titles.[1]}}
+                        {{/if}}
+                    </p>
+                    <ul>
+                        {{#if urls.[0]}}
+                        <li><a href="{{urls.[0]}}" target="_blank">{{urls.[0]}}</a></li>
+                        {{/if}}
+
+                        {{#if urls.[1]}}
+                        <li><a href="{{urls.[1]}}" target="_blank">{{urls.[1]}}</a></li>
+                        {{/if}}
+                    </ul>
+                </div>
+            </div>
+        </div>
+        {{/authors}}
+    </script>
+    <script src="handlebars.js"></script>
+    <script src="scripts.js"></script>
+</body>
+</html>

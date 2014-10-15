@@ -1,0 +1,10 @@
+Document model
+	Set of documents, e.g. JSON strings
+Key-value model
+	Set of key-value pairs
+Hierarchical key-value
+	Hierarchy of key-value pairs
+Wide-column model
+	Key-value model with schema
+Object model
+	Set of OOP-style objects

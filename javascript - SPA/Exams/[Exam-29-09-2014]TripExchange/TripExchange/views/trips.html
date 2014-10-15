@@ -1,0 +1,71 @@
+﻿<div ng-show="isLogged()">
+    <a href="/#/createTrip"><input type="button" value="Create trip" ng-click="createTrip()" /></a>
+    
+    <div>
+        <label>Page number:</label>
+        <input type="text" ng-model="filter.page" value="1" />
+    </div>
+
+    <div>
+        <label>Sort by:</label>
+        <select ng-model="filter.by">
+            <option value="date" selected="selected">Date</option>
+            <option value="driver">Driver</option>
+            <option value="seats">Seats</option>
+        </select>
+    </div>
+
+    <div>
+        <label>Order</label>
+        <select ng-model="filter.type">
+            <option value="asc" selected="selected">Ascending</option>
+            <option value="desc">Descending</option>
+        </select>
+    </div>
+
+    <div>
+        <label>From</label>
+        <select ng-model="filter.fromTown">
+            <option ng-repeat="fromTown in fromTowns">{{fromTown}}</option>
+        </select>
+    </div>
+
+    <div>
+        <label>To</label>
+        <select ng-model="filter.toTown">
+            <option ng-repeat="toTown in toTowns">{{toTown}}</option>
+        </select>
+    </div>
+
+    <div>
+        <label>Include finished: </label>
+        <input type="checkbox" ng-model="filter.finished" />
+    </div>
+
+    <div>
+        <label>Only mine: </label>
+        <input type="checkbox" ng-model="filter.onlyMine" />
+    </div>
+    <input type="button" ng-click="filterTrips(filter)" value="Filter" />
+</div>
+<div id="table-container">
+    <h1>{{noResults}}</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>Driver</th>
+                <th>From</th>
+                <th>To</th>
+                <th>Departure Time</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr ng-repeat="trip in trips">
+                <td><a href="/#/{{trip.driverId}}">{{trip.driverName}}</a></td>
+                <td>{{trip.from}}</td>
+                <td>{{trip.to}}</td>
+                <td>{{trip.departureDate}}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>

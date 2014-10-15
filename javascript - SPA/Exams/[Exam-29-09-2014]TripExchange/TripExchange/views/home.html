@@ -1,0 +1,43 @@
+﻿<div>
+    Trips: {{stats.trips}} | Finished trips: {{stats.finishedTrips}} | Users: {{stats.users}} | Drivers: {{stats.drivers}} 
+</div>
+<div id="table-container">
+    <div>
+        <table>
+            <thead>
+                <tr>
+                    <th>Driver</th>
+                    <th>From</th>
+                    <th>To</th>
+                    <th>Departure Time</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="trip in trips">
+                    <td>{{trip.driverName}}</td>
+                    <td>{{trip.from}}</td>
+                    <td>{{trip.to}}</td>
+                    <td>{{trip.departureDate}}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div>
+        <table>
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Upcoming Trips</th>
+                    <th>Total Trips</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="driver in drivers">
+                    <td>{{driver.name}}</td>
+                    <td>{{driver.numberOfUpcomingTrips}}</td>
+                    <td>{{driver.numberOfTotalTrips}}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

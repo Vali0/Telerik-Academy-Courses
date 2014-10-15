@@ -1,0 +1,293 @@
+Task01
+---
+CREATE DATABASE Customers;
+GO
+use Customers;
+
+CREATE TABLE Persons (
+	Id int IDENTITY,
+	FirstName nvarchar(50) NOT NULL,
+	LastName nvarchar(50) NOT NULL,
+	SSN nvarchar(20) NOT NULL,
+	CONSTRAINT PK_Persons PRIMARY KEY(Id)
+)
+
+CREATE TABLE Accounts (
+	Id int IDENTITY,
+	Balance MONEY NOT NULL,
+	PersonId int,
+	CONSTRAINT PK_Accounts PRIMARY KEY(Id)
+	CONSTRAINT FK_Accounts_Persons FOREIGN KEY(PersonId)
+		REFERENCES Persons(Id)
+)
+
+INSERT INTO Persons (FirstName, LastName, SSN)
+VALUES
+	('Pesho', 'Trubata', '1234567'),
+	('Kiro', 'Motikata', '1234567')
+	
+INSERT INTO Accounts (Balance, PersonId)
+VALUES
+	(9999, 1),
+	(1234, 2)
+	
+CREATE PROC usp_ShowFullNameOfPersons
+AS
+	SELECT FirstName + ' ' + LastName AS FullName
+	FROM Persons
+GO	
+
+EXEC usp_ShowFullNameOfPersons
+---
+
+Task02
+---
+CREATE PROC usp_GetPersonsThatHaveMoreMoneyThanGiven @minMoney int
+AS
+	SELECT p.FirstName + ' ' + p.LastName AS FullName, a.Balance
+	FROM Persons p
+		JOIN Accounts a
+		ON a.PersonId = p.Id
+	WHERE Balance > @minMoney
+GO
+
+EXEC dbo.usp_GetPersonsThatHaveMoreMoneyThanGiven @minMoney = 1235
+---
+
+Task03
+---
+CREATE FUNCTION ufn_CalculateInterestRate (@sum MONEY, @yearlyInterest FLOAT, @months TINYINT)
+	RETURNS MONEY
+AS
+	BEGIN
+		DECLARE @result MONEY
+		SET @result = @sum + @sum * @yearlyInterest * @months
+		RETURN @result
+	END
+GO
+
+SELECT dbo.ufn_CalculateInterestRate (1200, 7.5, 24)
+---
+
+Task04
+---
+CREATE PROC usp_CalculateInterestForOneMonth @accId INT, @rate FLOAT
+AS
+	DECLARE @result MONEY
+	DECLARE @accMoney MONEY
+	
+	SET @accMoney = (SELECT a.Balance
+	FROM Accounts a 
+	WHERE a.Id = @accId)
+
+	SET @result = dbo.ufn_CalculateInterestRate(@accMoney, @rate, 1)
+
+	RETURN @result
+GO
+
+DECLARE	@return_value int
+
+EXEC	@return_value = [dbo].[usp_CalculateInterestForOneMonth]
+		@accId = 1,
+		@rate = 5.4
+
+SELECT	'Return Value' = @return_value
+
+GO
+---
+
+Task05
+---
+CREATE PROC usp_WithdrawMoney @accId INT, @drawMoney MONEY
+AS
+	UPDATE Accounts
+	SET Balance = Balance - @drawMoney
+	WHERE Id = @accId
+GO
+
+CREATE PROC usp_DepositMoney @accId INT, @depositMoney MONEY
+AS
+	UPDATE Accounts
+	SET Balance = Balance + @depositMoney
+	WHERE Id = @accId
+GO
+---
+
+Task06
+---
+CREATE TABLE Logs (
+  LogID INT IDENTITY,
+  OldSum MONEY NOT NULL,
+  NewSum MONEY NOT NULL,
+  AccountID INT NOT NULL,
+  CONSTRAINT PK_LogID PRIMARY KEY(LogID),
+  CONSTRAINT FK_Logs_Accounts
+  FOREIGN KEY (AccountID)
+  REFERENCES Accounts(Id)
+)
+GO
+ 
+CREATE TRIGGER tr_AccountsUpdate ON Accounts FOR UPDATE
+AS
+ 
+INSERT INTO Logs (OldSum, NewSum, AccountID)
+SELECT d.Balance,
+           i.Balance,
+           d.Id
+  FROM deleted AS d
+  JOIN inserted AS i
+    ON d.Id = i.Id
+GO
+ 
+EXEC dbo.usp_DepositMoney 1, 200
+GO
+---
+
+Task07
+---
+CREATE FUNCTION CheckIfHasLetters (@word nvarchar(20), @letters nvarchar(20))
+RETURNS BIT
+AS
+BEGIN
+	DECLARE @lettersLen int = LEN(@letters),
+	@matches int = 0,
+	@currentChar nvarchar(1)
+	WHILE(@lettersLen > 0)
+	BEGIN
+		SET @currentChar = SUBSTRING(@letters, @lettersLen, 1)
+		IF(CHARINDEX(@currentChar, @word, 0) > 0)
+		BEGIN
+			SET @matches += 1
+			SET @lettersLen -= 1
+		END
+		ELSE
+			SET @lettersLen -= 1
+	END
+	IF(@matches >= LEN(@word) OR @matches >= LEN(@letters))
+		RETURN 1
+	RETURN 0
+	END
+GO
+
+CREATE FUNCTION NamesAndTowns(@letters nvarchar(20))
+RETURNS @ResultTable TABLE
+	(
+		Name varchar(50) NOT NULL
+	)
+AS
+	BEGIN
+		INSERT INTO @ResultTable
+		SELECT LastName FROM Employees
+		INSERT INTO @ResultTable
+		SELECT FirstName FROM Employees
+		INSERT INTO @ResultTable
+		SELECT towns.Name FROM Towns towns
+		DELETE FROM @ResultTable
+		WHERE dbo.CheckIfHasLetters(Name, @letters) = 0
+		RETURN
+	END
+GO
+
+SELECT * FROM dbo.NamesAndTowns('oistmiahf')
+---
+
+Task08
+---
+DECLARE empCursor CURSOR READ_ONLY
+FOR
+	SELECT e.FirstName, e.LastName, t.Name, b.FirstName, b.LastName
+	FROM Employees e
+		JOIN Addresses a
+		ON a.AddressID = e.AddressID
+		JOIN Towns t
+		ON t.TownID = a.TownID,
+		Employees b
+		JOIN Addresses ad
+		ON b.AddressID = ad.AddressID
+		JOIN Towns t2
+		ON ad.TownID = t2.TownID
+	WHERE t.Name = t2.Name AND e.EmployeeID <> b.EmployeeID
+	ORDER BY e.FirstName, b.FirstName
+	OPEN empCursor
+
+DECLARE @firstName char(20), @lastName char(20), @town char(20), @firstName1 char(20), @lastName1 char(20)
+FETCH NEXT FROM empCursor INTO @firstName, @lastName, @town, @firstName1, @lastName1
+
+WHILE @@FETCH_STATUS = 0
+BEGIN
+	PRINT @firstName + ' ' + @lastName + '-' + @town + ' ' + @firstName1 + ' ' + @lastName1
+	FETCH NEXT FROM empCursor
+	INTO @firstName, @lastName, @town, @firstName1, @lastName1
+END
+
+CLOSE empCursor
+DEALLOCATE empCursor
+GO
+---
+
+Task09
+---
+DECLARE empCursor CURSOR READ_ONLY FOR
+	SELECT Name FROM Towns
+	OPEN empCursor
+DECLARE @townName VARCHAR(50), @userNames VARCHAR(MAX)
+FETCH NEXT FROM empCursor INTO @townName
+
+WHILE @@FETCH_STATUS = 0
+  BEGIN
+                BEGIN
+                DECLARE nameCursor CURSOR READ_ONLY FOR
+                SELECT a.FirstName, a.LastName
+                FROM Employees a
+                JOIN Addresses adr
+                ON a.AddressID = adr.AddressID
+                JOIN Towns t1
+                ON adr.TownID = t1.TownID
+                WHERE t1.Name = @townName
+                OPEN nameCursor
+               
+                DECLARE @firstName VARCHAR(50), @lastName VARCHAR(50)
+                FETCH NEXT FROM nameCursor INTO @firstName,  @lastName
+                WHILE @@FETCH_STATUS = 0
+                        BEGIN
+                                SET @userNames = CONCAT(@userNames, @firstName, ' ', @lastName, ', ')
+                                FETCH NEXT FROM nameCursor
+                                INTO @firstName,  @lastName
+                        END
+        CLOSE nameCursor
+        DEALLOCATE nameCursor
+                END
+                SET @userNames = LEFT(@userNames, LEN(@userNames) - 1)
+    PRINT @townName + ' -> ' + @userNames
+    FETCH NEXT FROM empCursor
+    INTO @townName
+  END
+CLOSE empCursor
+DEALLOCATE empCursor
+GO
+---
+
+Task10
+---
+Tutorial: http://msdn.microsoft.com/en-us/library/ms131056.aspx
+
+sp_configure 
+'clr enabled', 1 
+GO 
+
+RECONFIGURE 
+GO 
+
+CREATE ASSEMBLY StrConcat  
+FROM 'D:\Telerik Courses homeworks\Databases\05.T-SQL\StrConcat.dll'; 
+GO 
+
+CREATE AGGREGATE StrConcat (@input nvarchar(200)) 
+RETURNS nvarchar(max)
+EXTERNAL NAME StrConcat.Concatenate;
+GO  
+
+SELECT dbo.StrConcat(FirstName + ' ' + LastName) 
+FROM Employees; 
+GO 
+---

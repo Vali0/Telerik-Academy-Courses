@@ -1,0 +1,31 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <script src="Scripts/libs/require.js" data-main="Scripts/clientApp"></script>
+    <style>
+        fieldset {
+            display: inline-block;
+        }
+    </style>
+</head>
+<body>
+    <div id="students-container"></div>
+    <form>
+        <fieldset>
+            <legend>Add Student</legend>
+            <label>Name</label>
+            <input type="text" id="student-name" />
+            <label>Grade</label>
+            <input type="text" id="student-grade" />
+            <input type="button" id="add-student" value="Add" />
+        </fieldset>
+        <fieldset>
+            <legend>Remove Student</legend>
+            <label>Student id</label>
+            <input type="text" id="student-id" />
+            <input type="button" id="remove-student" value="Remove" />
+        </fieldset>
+    </form>
+</body>
+</html>

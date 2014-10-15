@@ -1,0 +1,10 @@
+﻿input[type="color"]:first-of-type {
+    margin-right: 50px;
+}
+
+textarea {
+    width:200px;
+    height:200px;
+    display:block;
+    margin: 20px 0 0 80px;
+}

@@ -1,0 +1,27 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <style>
+        input[type="button"]:first-of-type {
+            display: block;
+        }
+
+        ul {
+            list-style-type: none;
+        }
+
+            ul li a {
+                cursor: pointer;
+            }
+    </style>
+</head>
+<body>
+    <label>Description</label>
+    <input type="text" id="todo-description" placeholder="TODO description" />
+    <input type="button" value="Add TODO" onclick="addTODO()" />
+    <input type="button" value="Remove selected items" onclick="removeTODO()" />
+    <ul id="todo-list"></ul>
+    <script src="todo-generator.js"></script>
+</body>
+</html>

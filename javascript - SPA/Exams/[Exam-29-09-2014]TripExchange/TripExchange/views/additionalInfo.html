@@ -1,0 +1,10 @@
+﻿Driver name: {{driver.name}} - Number of total trips: {{driver.numberOfTotalTrips}} - Number of upcoming trips: {{driver.numberOfUpcomingTrips}}
+<ul>
+    <li ng-repeat="trip in driver.trips">
+        <ul>
+            From: {{trip.from}} - To: {{trip.to}}
+            Departure date: {{trip.departureDate}}
+            Number of seats: {{trip.numberOfFreeSeats}}
+        </ul>
+    </li>
+</ul>

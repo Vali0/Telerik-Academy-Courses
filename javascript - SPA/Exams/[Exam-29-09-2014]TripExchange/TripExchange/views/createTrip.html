@@ -1,0 +1,24 @@
+﻿<form>
+    <div>
+        <label>From</label>
+        <select ng-model="data.from">
+            <option ng-repeat="fromTown in fromTowns">{{fromTown}}</option>
+        </select>
+    </div>
+
+    <div>
+        <label>To</label>
+        <select ng-model="data.to">
+            <option ng-repeat="toTown in toTowns">{{toTown}}</option>
+        </select>
+    </div>
+    <div>
+        <label>Available seats</label>
+        <input type="text" ng-model="data.availableSeats" />
+    </div>
+    <div>
+        <label>Departure Time</label>
+        <input type="text" ng-model="data.departureTime" />
+    </div>
+    <input type="button" value="Create" ng-click="createTrip(data)" />
+</form>

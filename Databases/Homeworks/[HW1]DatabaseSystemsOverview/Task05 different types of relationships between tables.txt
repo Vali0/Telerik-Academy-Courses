@@ -1,0 +1,5 @@
+Relationships between tables are based on interconnections: primary key / foreign key.
+There are three types of relations between tables based on primary and foreign keys.
+	one to one - A single record in a table corresponds to a single record in the other table.
+	one to many - A single record in the first table has many corresponding records in the second table.
+	many to many - Records in the first table have many corresponding records in the second one and vice versa.

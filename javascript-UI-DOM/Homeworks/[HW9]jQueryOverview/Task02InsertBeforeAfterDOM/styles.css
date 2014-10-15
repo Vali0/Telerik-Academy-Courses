@@ -1,0 +1,23 @@
+﻿#container {
+    display: inline-block;
+    word-break: break-all;
+}
+
+#container, #buttons {
+    width: 500px;
+    border: 1px solid #000;
+}
+
+#buttons {
+    margin-top: 30px;
+    height: 50px;
+    border: none;
+}
+
+    #buttons button {
+        width: 50%;
+    }
+
+#input {
+    width: 98.5%;
+}

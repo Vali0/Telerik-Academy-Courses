@@ -1,0 +1,23 @@
+﻿body #login-form {
+  width: 300px;
+  padding: 5px 0 25px 20px;
+  border: 1px solid black;
+}
+body #chat-form {
+  padding: 0 5px 10px 10px;
+  text-align: center;
+  width: 500px;
+  border: 1px solid black;
+}
+body #chat-form #chat-box {
+  border: 1px solid black;
+  overflow: auto;
+  height: 500px;
+  margin: 5px 0 5px 0;
+  text-align: left;
+}
+body #chat-form #chat-box ul#chat-messages {
+  display: inline-block;
+  text-align: left;
+}
+/*# sourceMappingURL=chat-styles.css.map */

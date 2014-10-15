@@ -1,0 +1,38 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title></title>
+        <style>
+            h1{
+                margin:20px;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>After word change click out of the text field</h1>
+        <form>
+            <label>Enter word to search: </label>
+            <input type="text" id="search-word" value="lorem" onchange="changeWord()" />
+            <input type="checkbox" id="sensitiveFlag" onchange="countWord()" />
+            <label>Check for insensitive search</label>
+        </form>
+        <div id="content">
+            Duis ac turpis a ligula posuere semper. Donec lorem massa diam, posuere ac facilisis ac, rutrum molestie
+            lorem odio. Vivamus turpis eros, ultrices ut egestas nec, loremplacerat vel tellus. Pellentesque
+            habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nulla hendrerit
+            euismod sapien, sed lobortis sem lacinia vel. Etiam luctus risus nibh, vitae vehicula purus ullamcorper id.
+            Maecenas ac commodo felis. Cras posuere egestas fermentum. Fusce lorem dui urna, tristique vel erat eu,
+            vehicula feugiat orci. Nullam orci dolor, faucibus vitae mollis ac, suscipit a mi. Sed non euismod metus,
+            eget fringilla nisi. In hac habitasse platea dictumst. Ut sed orci non metus iaculis ornare.
+            Maecenas id ante enim. Integer convallis convallis semper. Cras sit amet imperdiet quam.
+            Quisque lacus tellus, dapibus vel mi a, pulvinar auctor magna. Vestibulum vitae lorem cursus massa.
+            Duis facilisis ut risus sit lorem amet mattis. Interdum et malesuada fames ac ante ipsum primis in faucibus.
+            Phasellus rhoncus tortor semper metus volutpat, sed convallis mauris porta. Morbi ut massa mollis,
+            vehicula dolor vitae, aliquam arcu. Sed nec erat scelerisque, sagittis nisl sit amet, adipiscing lorem purus.
+            Sed laoreet vitae nisl eget semper. In non nunc sit amet risus LOREM tincidunt aliquet.
+            <!-- result 6 -->
+        </div>
+        <div id="result"></div>
+        <script src="script.js"></script>
+    </body>
+</html>

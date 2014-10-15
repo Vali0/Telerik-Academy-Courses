@@ -1,0 +1,6 @@
+SQL(Structured Query Language) is a special-purpose programming language designed for managing data held in a RDBMS.
+There are two types of data language which one provide different type of operations
+DDL – Data Definition Language
+	CREATE, ALTER, DROP commands
+DML – Data Manipulation Language
+	SELECT, INSERT, UPDATE, DELETE commands

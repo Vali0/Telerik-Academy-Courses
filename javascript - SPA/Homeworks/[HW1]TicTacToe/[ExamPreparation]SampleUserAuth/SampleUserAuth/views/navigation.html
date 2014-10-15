@@ -1,0 +1,11 @@
+﻿<ul ng-controller="homeController">
+    <li ng-hide="isLogged()">
+        <a href="/#/signin">Login</a>
+    </li>
+    <li ng-show="isLogged()">
+        <a href="/#/signout">LogOut</a>
+    </li>
+    <li>
+        <a href="/#/signup">Register</a>
+    </li>
+</ul>

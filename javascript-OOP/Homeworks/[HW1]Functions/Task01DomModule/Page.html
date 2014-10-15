@@ -1,0 +1,55 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <style>
+        #wrapper {
+            border: 1px solid black;
+            display: inline-block;
+        }
+
+            #wrapper div {
+                margin: 5px;
+                display: inline-block;
+                width: 50px;
+                height: 50px;
+                background-color: black;
+            }
+
+        a {
+            cursor: context-menu;
+            border: 1px solid black;
+            background-color: gray;
+            padding: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div id="wrapper">
+
+    </div>
+
+    <ul>
+        <li>First</li>
+        <li>Second</li>
+        <li>Third</li>
+        <li>Fourth</li>
+    </ul>
+    <a class="button">Can click</a>
+    <a class="button">Can click too</a>
+    <a>Can't click</a>
+    <script src="script.js"></script>
+    <script>
+        var div = document.createElement('div');
+        domModule.appendChild(div, '#wrapper');
+        domModule.removeChild('ul', 'li:first-child');
+        domModule.addHandler('a.button', 'click', function () {
+            alert('clicked!')
+        });
+
+        for (var i = 0; i < 100; i++) {
+            domModule.appendToBuffer('#wrapper', div.cloneNode(true));
+        }
+    </script>
+</body>
+</html>

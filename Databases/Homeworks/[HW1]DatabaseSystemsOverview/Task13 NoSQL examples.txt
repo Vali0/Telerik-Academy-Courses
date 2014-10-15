@@ -1,0 +1,99 @@
+Cassandra
+	massively scalable, partitioned row store, masterless architecture, linear scale performance, 
+	no single points of failure, read/write support across multiple data centers & cloud availability zones.
+	API / Query Method: CQL and Thrift, replication: peer-to-peer, written in: Java, Concurrency: tunable consistency, 
+	Misc: built-in data compression, MapReduce support, primary/secondary indexes, security features
+
+MongoDB
+	API: BSON, Protocol: C, Query Method: dynamic object-based language & MapReduce, 
+	Replication: Master Slave & Auto-Sharding, Written in: C++,Concurrency: Update in Place. 
+	Misc: Indexing, GridFS, Freeware + Commercial License
+	
+Couchbase Server
+	API: Memcached API+protocol (binary and ASCII) , most languages, Protocol: Memcached REST interface for cluster conf + management,
+	Written in: C/C++ + Erlang (clustering), Replication: Peer to Peer, fully consistent,
+	Misc: Transparent topology changes during operation, provides memcached-compatible caching buckets, commercially supported version available
+	
+RethinkDB
+	API: protobuf-based, Query Method: unified chainable query language (incl. JOINs, sub-queries, MapReduce, GroupedMapReduce); 
+	Replication: Sync and Async Master Slave with per-table acknowledgements, Sharding: guided range-based, Written in: C++, Concurrency: MVCC.
+	Misc: log-structured storage engine with concurrent incremental garbage compactor 
+	
+Clusterpoint Server
+	(freeware+commercial) API: XML, PHP, Java, .NET Protocols: HTTP, REST, native TCP/IP Query Method: full text search, XML, range and Xpath queries; 
+	Written in C++ Concurrency: ACID-compliant, transactional, multi-master cluster 
+	Misc: Petabyte-scalable document store and full text search engine. Information ranking. Replication. Cloudable. 
+	
+EJDB
+	Embedded JSON database engine based on tokyocabinet. API: C/C++, C# (.Net, Mono), Lua, Ruby, Python, Node.js binding, 
+	Protocol: Native, Written in: C, Query language: mongodb-like dynamic queries, Concurrency: RW locking, transactional , 
+	Misc: Indexing, collection level rw locking, collection level transactions, collection joins.
+	
+Aerospike
+	Fast & Web Scale DB. In-memory + Native flash. Predictable Performance - balanced 250k/50k TPS reads/writes, 99% under 1 ms.
+	Concurrency: ACID + Tunable Consistency. Replication: Zero Config, Zero Downtime, auto clustering, cross datacenter replication, rolling upgrades.
+	Written in: C. APIs: Many. 
+
+FoundationDB
+	An ordered key-value store with multikey ACID transactions, replicated storage, and fault tolerance, built on a shared-nothing, 
+	distributed architecture. API: Python, Ruby, Node, Java, C. Written In: Flow, C++. Data models: layers for tuples, arrays, tables, graphs, documents, indexes. 
+
+Oracle NOSQL Database
+	Oracle NoSQL Database is a distributed key-value database. 
+	It is designed to provide highly reliable, scalable and available data storage across a configurable set of systems that function as storage nodes. 
+	NoSQL and the Enterprise Data is stored as key-value pairs, which are written to particular storage node(s), 
+	based on the hashed value of the primary key. Storage nodes are replicated to ensure high availability, 
+	rapid failover in the event of a node failure and optimal load balancing of queries. API: Java/C. 
+
+Tarantool/Box
+	API: C, Perl, PHP, Python, Java and Ruby. Written in: Objective C ,Protocol: asynchronous binary, memcached, text (Lua console).
+	Data model: collections of dimensionless tuples, indexed using primary + secondary keys. Concurrency: lock-free in memory, consistent with disk 
+	(write ahead log). Replication: master/slave, configurable. Other: call Lua stored procedures. 
+
+TITAN
+	API: Java, Blueprints, Gremlin, Python, Clojure Protocol: Thrift, RexPro(Binary), Rexster (HTTP/REST) 
+	Query Method: Gremlin, SPARQL Written In: Java Data Model: labeled Property Graph, directed, 
+	multi-graph adjacency list Concurrency: ACID Tunable C Replication: Multi-Master License: Apache 2 Pluggable backends: 
+	Cassandra, HBase, MapR M7 Tables, BDB, Persistit, Hazelcast
+
+
+ArangoDB
+	API: REST, Graph Blueprints, C#, D, Ruby, Python, Java, PHP, Go, Python, etc. Data Model: K/V, JSON & graphs with shapes, 
+	Protocol: HTTP using JSON, Query Method: declarative AQL, query by example, map/reduce, key/value, Replication: master-slave (m-m to follow), 
+	Sharding: automatic and configurable Written in: C/C++/Javascript (V8 integrated), Concurrency: MVCC, tunable Misc: "stored procedures" 
+	(Ruby & Javascript), many indices as secondary, fulltext, geo, hash, Skip-list, bit-array, n-gram, capped collections 
+
+FatDB
+	.NET solution with tight SQL Server integration. API: C# Protocol: Protobuf or Raw Binary Query Method: 
+	LINQ Replication: All peer network, multiple consistency strategies Written in: C#, .NET Concurrency: 
+	Variable, Many Strategies License: Free Community Edition + Commercial Options Misc: Bi-Directional 
+	SQL Server sync, Integrated File Management System, Asynchronous Work Queue, Unified Routing, Fault Tolerance, Hosting agnostic 
+	(in-house, AWS, Azure etc)
+
+
+Objectivity
+	API: Languages: Java, C#, C++, Python, Smalltalk, SQL access through ODBC. 
+	Schema: native language class model, direct support for references, interoperable across all language bindings. 
+	64 bit unique object ID (OID) supports multi exa-byte. Platforms: 32 and 64 bit Windows, Linux, Mac OSX, *Unix. 
+	Modes: always consistent (ACID). Concurrency: locks at cluster of objects (container) level. Scaling: unique distributed architecture, 
+	dynamic addition/removal of clients & servers, cloud environment ready. 
+	Replication: synchronous with quorum fault tolerant across peer to peer partitions. 
+
+GemFire
+	GemFire offers in-memory globally distributed data management with dynamic scalability, very high performance and granular control 
+	supporting the most demanding applications. Well integrated with the Spring Framework, developers can quickly and easily 
+	provide sophisticated data management for applications. With simple horizontal scale-out, data latency caused by network roundtrips 
+	and disk I/O can be avoided even as applications grow. 
+
+EMC Documentum xDB
+	(commercial system) API: Java, XQuery, Protocol: WebDAV, web services, Query method: XQuery, XPath, XPointer, 
+	Replication: lazy primary copy replication (master/replicas), Written in: Java, Concurrency: concurrent reads, 
+	writes with lock; transaction isolation, Misc: Fully transactional persistent DOM; versioning; multiple index types; 
+	metadata and non-XML data support; unlimited horizontal scaling.
+
+Model 204 Database
+	A high performance dbms that runs on IBM mainframes (IBM z/OS, z/VM, zVSE), +SQL interface with nested entity support 
+	API: native 4GL (SOUL + o-o support), SQL, Host Language (COBOL, Assembler, PL1) API, ODBC, JDBC, .net, 
+	Websphere MQ, Sockets Scalability: automatic table space allocation, 64-bit support Written in: IBM assembler, 
+	C Query method: SOUL, SQL, RCL ( invocation of native language from client ) Concurrency: record and file level locking 
+	Connectivity: TN3270, Telnet, Http 

@@ -1,0 +1,218 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Shop Items</title>
+
+    <style>
+        table, th, td {
+            border: 1px solid;
+            border-collapse: collapse;
+            text-align: left;
+            padding: 5px;
+        }
+
+        thead, tfoot {
+            background-color: lightgrey;
+        }
+
+        td.rightFoot {
+            text-align: right;
+            border-left: none;
+        }
+
+        td.leftFoot {
+            text-align: left;
+            border-right: none;
+        }
+
+    </style>
+</head>
+<body>
+    <table>
+        <thead>
+            <tr>
+                <td colspan="6">Drag a column header and drop it here to group by that column</td>
+            </tr>
+            <tr>
+                <td>ProductID</td>
+                <td>Product name</td>
+                <td>Unit price</td>
+                <td>Quantity per unit</td>
+                <td>Units in stock</td>
+                <td>Discontinued</td>
+            </tr>
+            <tr>
+                <td>
+                    <form>
+                        <input type="text" name="productID" />
+                    </form>
+                </td>
+                <td>
+                    <form>
+                        <input type="text" name="productName" />
+                    </form>
+                </td>
+                <td>
+                    <form>
+                        <input type="text" name="unitPrice" />
+                        <input type="image" name="filterButton" src="filter.jpg" alt="Filter icon" />
+                    </form>
+                </td>
+                <td>
+                    <form>
+                        <input type="text" name="quantity" />
+                        <input type="image" name="filterButton" src="filter.jpg" alt="Filter icon" />
+                    </form>
+                </td>
+                <td>
+                    <form>  <input type="text" name="units" /></form>
+                </td>
+                <td>
+                    <form>
+                        <input type="checkbox" name="discountinued" />
+                        <input type="image" name="filterButton" src="filter.jpg" alt="Filter icon" />
+                    </form>
+                </td>
+            </tr>
+        </thead>
+
+        <tfoot>
+            <tr>
+                <td colspan="4" class="leftFoot">
+                    <form>
+                        <input type="image" src="left-end.jpg" alt="Left-end arrow" />
+                        <input type="image" src="left.jpg" alt="Left arrow" />
+                        <a href="#">1</a>,
+                        <a href="#">2</a>,
+                        <a href="#">3</a>,
+                        <a href="#">4</a>,
+                        <a href="#">5</a>,
+                        <a href="#">6</a>,
+                        <a href="#">7</a>,
+                        <a href="#">8</a>,
+                        <a href="#">9</a>,
+                        <a href="#">10</a>,
+                        <a href="#">...</a>
+                        <input type="image" src="right.jpg" alt="Right arrow" />
+                        <input type="image" src="right-end.jpg" alt="Right-end arrow" />
+                        <select name="pageSize">
+                            <option value="10">10</option>
+                            <option value="12">15</option>
+                            <option value="14">20</option>
+                            <option value="16">25</option>
+                            <option value="20">30</option>
+                            <option value="24">35</option>
+                            <option value="24">40</option>
+                        </select>
+                    </form>
+                </td>
+                <td colspan="2" class="rightFoot">335104 items in  33511 pages</td>
+            </tr>
+        </tfoot>
+
+        <tbody>
+            <tr>
+                <td>1</td>
+                <td>Chai</td>
+                <td>$18.00</td>
+                <td>10 boxes x 20 bags</td>
+                <td>39</td>
+                <td>
+                    <input type="checkbox" name="1" />
+                </td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>Chang</td>
+                <td>$19.00</td>
+                <td>24 - 12 oz bottles</td>
+                <td>17</td>
+                <td>
+                    <input type="checkbox" name="2" />
+                </td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>Aniseed Syrup</td>
+                <td>$10.00</td>
+                <td>12 - 500 ml bottles</td>
+                <td>13</td>
+                <td>
+                    <input type="checkbox" name="3" />
+                </td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td>Chef Anton's Cajun Seasoning</td>
+                <td>$22.00</td>
+                <td>48 - 6 oz jars</td>
+                <td>53</td>
+                <td>
+                    <input type="checkbox" name="4" />
+                </td>
+            </tr>
+            <tr>
+                <td>5</td>
+                <td>Chef Anton's Gumbo Mix</td>
+                <td>$21.35</td>
+                <td>36 boxes</td>
+                <td>0</td>
+                <td>
+                    <input type="checkbox" name="5" checked="checked" />
+                </td>
+            </tr>
+            <tr>
+                <td>6</td>
+                <td>Grandma's Boysenberry Spread</td>
+                <td>$25.00</td>
+                <td>12 - 8 oz jars</td>
+                <td>120</td>
+                <td>
+                    <input type="checkbox" name="6" />
+                </td>
+            </tr>
+            <tr>
+                <td>7</td>
+                <td>Uncle Bob's Organic Dried Pears</td>
+                <td>$30.00</td>
+                <td>12 - 1 lb pkgs</td>
+                <td>15</td>
+                <td>
+                    <input type="checkbox" name="7" />
+                </td>
+            </tr>
+            <tr>
+                <td>8</td>
+                <td>Northwoods Cranberry Sauce</td>
+                <td>$40.00</td>
+                <td>12 - 12 oz jars</td>
+                <td>6</td>
+                <td>
+                    <input type="checkbox" name="8" />
+                </td>
+            </tr>
+            <tr>
+                <td>9</td>
+                <td>Mishi Kobe Niku</td>
+                <td>$97.00</td>
+                <td>18 - 500 g pkgs</td>
+                <td>29</td>
+                <td>
+                    <input type="checkbox" name="9" checked="checked" />
+                </td>
+            </tr>
+            <tr>
+                <td>10</td>
+                <td>Ikura</td>
+                <td>$31.00</td>
+                <td>12 - 200 ml jars</td>
+                <td>31</td>
+                <td>
+                    <input type="checkbox" name="10" />
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+</body>
+</html>

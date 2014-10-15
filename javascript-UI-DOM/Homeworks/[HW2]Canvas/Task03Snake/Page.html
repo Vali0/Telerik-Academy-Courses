@@ -1,0 +1,27 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <style>
+        input[type="button"]{
+            display:block;
+            margin-bottom:10px;
+        }
+        canvas#the-canvas {
+            float: left;
+        }
+
+        div#results {
+            margin-left:20px;
+            float: left;
+        }
+    </style>
+</head>
+<body>
+    <input type="button" value="Start Game" onclick="onClickStartGame()" />
+    <input type="button" value="Clear Scores" onclick="onClickClearStorage()" />
+    <canvas id="the-canvas" width="900" height="430"></canvas>
+    <div id="results">result</div>
+    <script src="script.js"></script>
+</body>
+</html>

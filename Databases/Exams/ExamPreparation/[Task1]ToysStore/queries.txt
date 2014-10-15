@@ -1,0 +1,32 @@
+--Task01
+SELECT t.Name, t.Price
+FROM Toys t
+WHERE t.Type LIKE 'puzzle' AND t.Price > 10000
+
+--Task02
+SELECT  m.Name, Count(*) AS [Count]
+FROM Toys t
+	JOIN AgeRanges a
+	on t.AgeRangeId = a.Id AND a.MinimumAge >= 5 AND a.MaximumAge <= 10
+JOIN Manufacturers m
+	ON t.ManufacturerId = m.Id
+GROUP BY(m.Name)
+ORDER BY([Count])
+
+SELECT Name,
+(SELECT COUNT(*)
+FROM Toys t
+JOIN AgeRanges a
+	ON t.AgeRangeId = a.Id 
+	WHERE a.MinimumAge >= 5 AND a.MaximumAge <= 10 AND Manufacturers.Id = t.ManufacturerId) AS [Count]
+FROM  Manufacturers
+ORDER BY([Count])
+
+--Task03
+SELECT t.Name, t.Price, t.Color
+FROM Toys t
+	JOIN ToysCategories tc
+	ON t.Id = tc.ToyId
+	JOIN Categories c
+	ON c.Id = tc.CategoryId
+WHERE c.Name LIKE 'boys'

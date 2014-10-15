@@ -1,0 +1,26 @@
+﻿
+body ul {
+    list-style-type: none;
+    padding-left:8px;
+}
+
+body ul li a{
+    text-decoration:none;
+    color:black;
+}
+
+    body ul ul {
+        display: none;
+    }
+
+    body ul li:hover > a{
+        text-decoration:underline;
+    }
+
+   body ul li:hover > a + ul{
+       display:block;
+   }
+
+   body ul ul li a {
+       color:#a9a4a4;
+   }

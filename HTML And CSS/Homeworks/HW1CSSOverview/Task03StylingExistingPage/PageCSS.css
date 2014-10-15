@@ -1,0 +1,46 @@
+﻿body {
+    background-color: #a9a19f;
+}
+
+    body > header, body > footer {
+        text-align: center;
+    }
+
+header {
+    color: white;
+    font-size: 1.4em;
+    font-weight: bold;
+}
+
+a {
+    text-decoration: none;
+}
+
+nav li:last-child a {
+    text-decoration: underline;
+}
+
+a.current {
+    background-color: #c1b9b7;
+}
+
+nav ul {
+    list-style-type: none;
+}
+
+nav a {
+    color: white;
+}
+
+article > p {
+    font-size: 1.08em;
+}
+
+article footer p, a {
+    font-size: 0.9em;
+    color: black;
+}
+
+body > footer {
+    font-size: 1.08em;
+}

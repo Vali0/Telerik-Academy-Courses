@@ -1,0 +1,26 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <style>
+        fieldset {
+            display: inline-block;
+        }
+    </style>
+</head>
+<body>
+    <div id="wrapper"></div>
+    <!-- Template is generated with underscore. CHECK ui.js in Scripts-->
+    <script id="topics-template" type="x-mustache-template">
+        <li class="messages">
+            <p class="title">Title: {{title}}:</p>
+            <p class="body">Topic: {{body}}</p>
+            <span class="date">Posted at: {{postDate}}</span>
+            {{#user}}
+            <span class="username">by: {{username}}</span>
+            {{/user}}
+        </li>
+    </script>
+    <script src="Scripts/libs/require.js" data-main="Scripts/app"></script>
+</body>
+</html>

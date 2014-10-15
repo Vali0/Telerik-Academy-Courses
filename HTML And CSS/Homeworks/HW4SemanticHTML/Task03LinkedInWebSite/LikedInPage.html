@@ -1,0 +1,152 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" class="no-js">
+<head>
+    <title>LinkedIn</title>
+
+    <!--Make the page work on older browser versions-->
+    <script src="js/modernizr-1.0.min.js"></script> 
+    <!--Make the page work on older browser versions-->
+
+    <style>
+        table {
+            border-left: 1px solid;
+            border-right: 1px solid;
+            border-top: 1px solid;
+            border-bottom: 1px solid;
+            width: 100%;
+        }
+
+        th {
+            text-align: left;
+        }
+
+        li.nested {
+            list-style-type: none;
+        }
+    </style>
+</head>
+<body>
+    <table>
+        <thead>
+            <tr>
+                <th><a href="#">LikedIn</a></th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>
+                    <section>
+                        <nav>
+                            <ul>
+                                <li><a href="#">Home</a></li>
+                                <li><a href="#">What is LinkedIn?</a></li>
+                                <li><a href="#">Join Today</a></li>
+                                <li>
+                                    <form>
+                                        <fieldset>
+                                            <legend>Sign In</legend>
+                                            <ul>
+                                                <li>
+                                                    <label for="email">Email:</label>
+                                                    <input type="text" id="email" required="required" pattern="[^@]+@[^@]+\.[a-zA-Z]{2,6}" />
+                                                </li>
+                                                <li>
+                                                    <label for="password">Password:</label>
+                                                    <input type="password" id="password" required="required" />
+                                                </li>
+                                                <li>
+                                                    <input type="submit" value="Submit" />
+                                                </li>
+                                            </ul>
+                                        </fieldset>
+                                    </form>
+                                </li>
+
+                            </ul>
+                        </nav>
+                    </section>
+                </td>
+            </tr>
+            <tr>
+                <td><hr /></td>
+            </tr>
+            <tr>
+                <td>
+                    <header>
+                        <h2>Over 175 million professionals use LikedIn to exchange information, ideas and opportunities</h2>
+                    </header>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <section>
+                        <ul>
+                            <li>Stay informed about your contacts and industry</li>
+                            <li>Find the people &amp; knowledge you need to achieve your goals</li>
+                            <li>Control your professional identity online</li>
+                        </ul>
+                    </section>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <header>
+                        <h3>Join LinkedIn Today</h3>
+                    </header>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <section>
+                        <form>
+                            <fieldset>
+                                <legend>Sign Up</legend>
+                                <ul>
+                                    <li><label for="firstName">First Name:</label></li>
+                                    <li class="nested"><input type="text" id="firstName" required="required" /></li>
+                                    <li><label for="lastName">Last Name:</label></li>
+                                    <li class="nested"><input type="text" id="lastName" required="required" /></li>
+                                    <li><label for="e-mail">Email:</label></li>
+                                    <li class="nested"><input type="text" id="e-mail" required="required" pattern="[^@]+@[^@]+\.[a-zA-Z]{2,6}" /></li>
+                                    <li><label for="passwd">Password</label></li>
+                                    <li class="nested"><input type="password" id="passwd" required="required" pattern=".{6,}" title="6 or more characters" /> </li>
+                                </ul>
+                                <p>6 or more characters</p>
+                                <input type="submit" value="Join Now" />
+                                <a href="#">&plusmn;</a>
+                                <p>Already on LinkedIn? <a href="#">Sign In</a></p>
+                            </fieldset>
+                        </form>
+                    </section>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <header>
+                        <h3>Search for someone by name:</h3>
+                    </header>
+                </td>
+            <tr>
+                <td>
+                    <section>
+                        <form>
+                            <ul>
+                                <li>
+                                    <label for="fName">First Name:</label>
+                                    <input type="text" id="fName" required="required" />
+
+                                </li>
+                                <li>
+                                    <label for="lName">Last Name:</label>
+                                    <input type="text" id="lName" required="required" />
+                                </li>
+                            </ul>
+                            <input type="button" value="Go" />
+                        </form>
+                    </section>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>

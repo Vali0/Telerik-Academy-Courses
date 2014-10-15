@@ -1,0 +1,69 @@
+﻿html,
+body,
+div,
+ul,
+li,
+a {
+  padding: 0;
+  margin: 0;
+}
+div#wrapper {
+  width: 960px;
+  font-family: Helvetica, Arial, 'DejaVu Sans', 'Liberation Sans', Freesans, sans-serif;
+  font-size: 16px;
+}
+div#wrapper div.select-list ul {
+  background: #8168ff;
+  /* Old browsers */
+  background: -moz-linear-gradient(top, #8168ff 0%, #ffffff 100%);
+  /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #8168ff), color-stop(100%, #ffffff));
+  /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(top, #8168ff 0%, #ffffff 100%);
+  /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(top, #8168ff 0%, #ffffff 100%);
+  /* Opera 11.10+ */
+  background: -ms-linear-gradient(top, #8168ff 0%, #ffffff 100%);
+  /* IE10+ */
+  background: linear-gradient(to bottom, #8168ff 0%, #ffffff 100%);
+  /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#8168ff', endColorstr='#ffffff', GradientType=0);
+  /* IE6-9 */
+  margin-top: 25px;
+  float: left;
+  border-radius: 5px;
+  list-style-type: none;
+  overflow-y: scroll;
+  width: 150px;
+  height: 200px;
+}
+div#wrapper div.select-list ul li {
+  border-bottom: 1px solid black;
+  padding: 5px 15px;
+}
+div#wrapper div.select-list ul li.selected {
+  background: #6C4EFF;
+}
+div#wrapper div.select-list ul li:last-of-type {
+  border: none;
+}
+div#wrapper div.select-list ul li:first-letter {
+  text-decoration: underline;
+}
+div#wrapper div.select-list ul.all-items {
+  margin-right: 5px;
+  margin-left: 25px;
+}
+div#wrapper div.select-list ul.selected-items {
+  margin-left: 5px;
+}
+div#wrapper div.select-list a.btn-select img {
+  margin-left: 5px;
+}
+div#wrapper div.select-list img {
+  float: left;
+  margin-top: 115px;
+  margin-left: 0;
+  padding: 0;
+}
+/*# sourceMappingURL=task2.css.map */

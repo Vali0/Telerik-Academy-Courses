@@ -1,0 +1,40 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.30501.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Task01Slider", "Task01Slider\Task01Slider.csproj", "{4A6C0BDC-020A-4C7B-9AFD-EC492866DE1D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Task02InsertBeforeAfterDOM", "Task02InsertBeforeAfterDOM\Task02InsertBeforeAfterDOM.csproj", "{604CDFB2-53C0-4772-880B-D8722BFCBFDB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Task03GenerateTable", "Task03GenerateTable\Task03GenerateTable.csproj", "{F445EB97-5416-4BAE-A9AC-787A66AD0118}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Task04ChangeBodyBackground", "Task04ChangeBodyBackground\Task04ChangeBodyBackground.csproj", "{BD4A6263-520C-4556-9FD7-FDDE61B4A956}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{4A6C0BDC-020A-4C7B-9AFD-EC492866DE1D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4A6C0BDC-020A-4C7B-9AFD-EC492866DE1D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4A6C0BDC-020A-4C7B-9AFD-EC492866DE1D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4A6C0BDC-020A-4C7B-9AFD-EC492866DE1D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{604CDFB2-53C0-4772-880B-D8722BFCBFDB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{604CDFB2-53C0-4772-880B-D8722BFCBFDB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{604CDFB2-53C0-4772-880B-D8722BFCBFDB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{604CDFB2-53C0-4772-880B-D8722BFCBFDB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F445EB97-5416-4BAE-A9AC-787A66AD0118}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F445EB97-5416-4BAE-A9AC-787A66AD0118}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F445EB97-5416-4BAE-A9AC-787A66AD0118}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F445EB97-5416-4BAE-A9AC-787A66AD0118}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BD4A6263-520C-4556-9FD7-FDDE61B4A956}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BD4A6263-520C-4556-9FD7-FDDE61B4A956}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BD4A6263-520C-4556-9FD7-FDDE61B4A956}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BD4A6263-520C-4556-9FD7-FDDE61B4A956}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

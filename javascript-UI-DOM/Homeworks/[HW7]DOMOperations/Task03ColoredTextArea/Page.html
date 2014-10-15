@@ -1,0 +1,17 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>Colored Text Area</title>
+        <link href="style.css" rel="stylesheet" />
+    </head>
+    <body>
+        <form>
+            <label for="fontColor">Select font color</label>
+            <input type="color" id="fontColor" onchange="setFontColor()" />
+            <label for="backgroundColor">Select background color</label>
+            <input type="color" id="backgroundColor" onchange="setBackgroundColor()" />
+            <textarea id="coloredArea">Some dummy text!</textarea>
+        </form>
+        <script src="colorArea.js"></script>
+    </body>
+</html>

@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Task01MathExpression", "Task01MathExpression\Task01MathExpression.csproj", "{09F6E03F-18AB-4DAC-BA84-67ED9421F119}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Task02LastMajorityMultiple", "Task02LastMajorityMultiple\Task02LastMajorityMultiple.csproj", "{BEF586C3-18AA-4DBC-ABF0-8490C1AB7C03}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{09F6E03F-18AB-4DAC-BA84-67ED9421F119}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{09F6E03F-18AB-4DAC-BA84-67ED9421F119}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{09F6E03F-18AB-4DAC-BA84-67ED9421F119}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{09F6E03F-18AB-4DAC-BA84-67ED9421F119}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BEF586C3-18AA-4DBC-ABF0-8490C1AB7C03}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BEF586C3-18AA-4DBC-ABF0-8490C1AB7C03}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BEF586C3-18AA-4DBC-ABF0-8490C1AB7C03}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BEF586C3-18AA-4DBC-ABF0-8490C1AB7C03}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

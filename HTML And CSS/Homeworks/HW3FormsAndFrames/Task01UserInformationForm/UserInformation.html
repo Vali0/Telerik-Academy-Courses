@@ -1,0 +1,146 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>User Information</title>
+    <style>
+        table, td, th {
+            border: 1px solid;
+            border-collapse: collapse;
+            padding: 5px;
+        }
+
+        th {
+            text-align: right;
+            width: 200px;
+        }
+
+        td {
+            text-align: left;
+        }
+
+        input, textarea {
+            width: 90%;
+        }
+
+            input.zip {
+                width: 20%;
+            }
+
+            input[type="radio"] {
+                width: 20px;
+            }
+
+        tfoot {
+            background-color: lightblue;
+        }
+
+            tfoot input {
+                width: auto;
+            }
+
+            tfoot td {
+                text-align: center;
+            }
+
+        textarea {
+            resize: none;
+        }
+    </style>
+</head>
+<body>
+    <form>
+        <table>
+            <tbody>
+                <tr>
+                    <th><label for="lastName">Last Name</label></th>
+                    <td colspan="3"><input type="text" id="lastName" name="lastName" value="Nakov" /> </td>
+                </tr>
+                <tr>
+                    <th><label for="firstName">First Name</label></th>
+                    <td colspan="3"><input type="text" id="firstName" name="firstName" value="Svetlin" /></td>
+                </tr>
+                <tr>
+                    <th><label for="address">Address</label></th>
+                    <td colspan="3"><textarea name="address" id="address">17 Hristo Botev Str. floor 3, apt. 12</textarea></td>
+                </tr>
+                <tr>
+                    <th><label for="city">City</label></th>
+                    <td><input type="text" id="city" name="city" value="Kaspichan" /></td>
+                    <th style="width:auto;"><label for="state">State</label></th>
+                    <td><input type="text" id="state" name="state" /></td>
+                </tr>
+                <tr>
+                    <th><label for="postCode">Zip/Postal Code</label></th>
+                    <td colspan="3"><input type="text" class="zip" id="postCode" name="postCode" value="9325" /> </td>
+                </tr>
+                <tr>
+                    <th><label for="country">Country</label></th>
+                    <td colspan="3">
+                        <select name="country" id="country">
+                            <option value="Value 1" selected="selected">---choose country---</option>
+                            <option value="Value 2">Bulgaria</option>
+                            <option value="Value 3">United States</option>
+                            <option value="Value 4">United Kingdom</option>
+                            <option value="Value 5">France</option>
+                            <option value="Value 6">Spain</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <th><label>Phone (country code, area code, number)</label></th>
+                    <td colspan="3">
+                        (+<input style="width:30px" maxlength="4" type="tel" name="countryCode" value="359" pattern="\d{1,4}" />)
+                        <input style="width:80px;" type="tel" name="areaCode" value="88" pattern="\d{2}" /> -
+                        <input style="width:160px;" type="tel" name="number" value="8334343" pattern="\d{7}" />
+                    </td>
+                </tr>
+                <tr>
+                    <th><label for="email">E-mail</label></th>
+                    <td colspan="3"><input id="email" value="nakov@kaspichan.org" pattern="[^@]+@[^@]+\.[a-zA-Z]{2,6}" /></td>
+                </tr>
+                <tr>
+                    <th><label>Birth date</label></th>
+                    <td colspan="3">
+                        Month <input type="text" style="width:18px" value="06" pattern="\d{1,2}" maxlength="2" />
+                        Day <input type="text" style="width:18px" value="04" pattern="\d{1,2}" maxlength="2" />
+                        Year(4 digit) <input type="text" style="width:30px;" value="1980" pattern="\d{4}" maxlength="4" />
+                    </td>
+                </tr>
+                <tr>
+                    <th><label for="gender">Gender</label></th>
+                    <td colspan="3">
+                        <select name="gender" id="gender">
+                            <option value="Value 1" selected="selected">---choose gender---</option>
+                            <option value="Value 2">Male</option>
+                            <option value="Value 3">Female</option>
+                            <option value="Value 4">Other</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <th>Starting date</th>
+                    <td colspan="3">
+                        <input type="radio" name="startDate" value="Spring 2006" id="Spring 2006" checked="checked" />
+                        <label for="Spring 2006">Spring 2006</label>
+                        <input type="radio" name="startDate" value="Summer 2006" id="Summer 2006" />
+                        <label for="Summer 2006">Summer 2006</label>
+                    </td>
+                </tr>
+                <tr>
+                    <th><label for="comments">Comments/Questions</label></th>
+                    <td colspan="3"><textarea id="comments" name="comments">Please send me more information about the lodging</textarea></td>
+                </tr>
+            </tbody>
+            <tfoot>
+                <tr>
+                    <td colspan="4">
+                        <input type="submit" value="Submit" />
+                        <!-- It is working but because values can't clear it -->
+                        <input type="reset" value="Clear This Form" />
+                    </td>
+                </tr>
+            </tfoot>
+        </table>
+    </form>
+</body>
+</html>

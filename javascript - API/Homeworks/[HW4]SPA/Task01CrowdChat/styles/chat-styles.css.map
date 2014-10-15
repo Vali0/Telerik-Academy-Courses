@@ -1,0 +1,9 @@
+{
+  "version": 3,
+  "file": "chat-styles.css",
+  "sources": [
+    "chat-styles.less"
+  ],
+  "names": [],
+  "mappings": "AAAA,IACI;EACI,YAAA;EACA,wBAAA;EACA,uBAAA;;AAJR,IAOI;EACI,wBAAA;EACA,kBAAA;EACA,YAAA;EACA,uBAAA;;AAXR,IAOI,WAMI;EACI,uBAAA;EACA,cAAA;EACA,aAAA;EACA,mBAAA;EACA,gBAAA;;AAlBZ,IAOI,WAMI,UAOI,GAAE;EACE,qBAAA;EACA,gBAAA"
+}

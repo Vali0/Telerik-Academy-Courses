@@ -1,0 +1,49 @@
+@mixin animation($speed) {
+	-moz-transition: opacity $speed ease-in-out;
+	-webkit-transition: opacity $speed ease-in-out;
+	-o-transition: opacity $speed ease-in-out;
+	transition: opacity $speed ease-in-out;
+}
+
+#simple-web-gallery {
+	nav {   
+	text-align: center;
+            margin: 0 auto;
+		ul {
+		margin: 0;
+                padding: 0;
+			li {
+			    list-style: none;
+                    display: inline-block;
+				.thubnail {
+					width: 150px;
+					height:150px;
+				}
+			}
+		}
+	}
+}
+
+.images-container {
+	width: 420px;
+    margin: 0 auto;
+	input[type="radio"] {
+		display:none;
+		&:checked + .image {
+		opacity: 1;
+        z-index: 1;
+        visibility: visible;
+		}
+	}
+	.image {
+		width: 460px;
+        height: 450px;
+        opacity: 0;
+        z-index: -1;
+        visibility: hidden;
+        display: inline-block;
+        position: absolute;
+		@include
+		animation(1s);
+	}
+}

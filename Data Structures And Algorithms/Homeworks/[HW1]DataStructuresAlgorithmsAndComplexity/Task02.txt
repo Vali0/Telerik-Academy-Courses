@@ -1,0 +1,15 @@
+What is the expected running time of the following C# code? Explain why. Assume the input matrix has size of n * m.
+long CalcCount(int[,] matrix)
+{
+    long count = 0;
+    for (int row=0; row<matrix.GetLength(0); row++)
+        if (matrix[row, 0] % 2 == 0)
+            for (int col=0; col<matrix.GetLength(1); col++)
+                if (matrix[row,col] > 0)
+                    count++;
+    return count;
+}
+
+The complexity of algorithm is O(n - z + z * m) where z is the number of the even numbers in the first column of matrix.
+Outside loop has n iterations in inside loop algorithm goes only if the number in each cell of first column is even number
+If numbers in first column are odd the complexity will be O(n) and if they're all even complexity will be O(n*m)

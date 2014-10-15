@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Task043DLines", "Task043DLines\Task043DLines.csproj", "{B6398C36-A1A7-4606-A427-753401AE4B93}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Task01GenomeDecoder", "Task01GenomeDecoder\Task01GenomeDecoder.csproj", "{9814FE9C-0E18-425E-9B45-F6C4BDBF70EC}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B6398C36-A1A7-4606-A427-753401AE4B93}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B6398C36-A1A7-4606-A427-753401AE4B93}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B6398C36-A1A7-4606-A427-753401AE4B93}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B6398C36-A1A7-4606-A427-753401AE4B93}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9814FE9C-0E18-425E-9B45-F6C4BDBF70EC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9814FE9C-0E18-425E-9B45-F6C4BDBF70EC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9814FE9C-0E18-425E-9B45-F6C4BDBF70EC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9814FE9C-0E18-425E-9B45-F6C4BDBF70EC}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

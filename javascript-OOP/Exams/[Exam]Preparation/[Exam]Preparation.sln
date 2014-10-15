@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.30501.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Task1TODOList", "Task1TODOList\Task1TODOList.csproj", "{7679930E-E7F3-4EAE-B0BE-2AB04027889A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Task02StudentsCourses", "Task02StudentsCourses\Task02StudentsCourses.csproj", "{B0D35ACD-C74D-49C8-805D-E180F038FFF3}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{7679930E-E7F3-4EAE-B0BE-2AB04027889A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7679930E-E7F3-4EAE-B0BE-2AB04027889A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7679930E-E7F3-4EAE-B0BE-2AB04027889A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7679930E-E7F3-4EAE-B0BE-2AB04027889A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B0D35ACD-C74D-49C8-805D-E180F038FFF3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B0D35ACD-C74D-49C8-805D-E180F038FFF3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B0D35ACD-C74D-49C8-805D-E180F038FFF3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B0D35ACD-C74D-49C8-805D-E180F038FFF3}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

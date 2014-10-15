@@ -1,0 +1,240 @@
+Task01
+---
+Structured Query Language (SQL)
+Declarative language for query and manipulation of relational data
+
+http://en.wikipedia.org/wiki/SQL
+http://en.wikipedia.org/wiki/Data_definition_language
+http://en.wikipedia.org/wiki/Data_manipulation_language
+
+SQL consists of:
+Data Manipulation Language (DML)
+SELECT, INSERT, UPDATE, DELETE
+Data Definition Language (DDL)
+CREATE, DROP, ALTER
+GRANT, REVOKE
+---
+
+Task02
+---
+T-SQL (Transact SQL) is an extension to the standard SQL language
+T-SQL is the standard language used in MS SQL Server
+http://en.wikipedia.org/wiki/Transact-SQL
+Supports if statements, loops, exceptions
+Constructions used in the high-level procedural programming languages
+T-SQL is used for writing stored procedures, functions, triggers, etc.
+---
+
+Task04
+---
+use TelerikAcademy;
+
+SELECT d.Name AS DepartmentName, e.FirstName AS ManagerName
+FROM Departments d
+JOIN Employees e
+ON d.ManagerID = e.EmployeeID;
+---
+
+Task05
+---
+use TelerikAcademy;
+
+SELECT Departments.Name
+FROM Departments;
+---
+
+Task06
+---
+use TelerikAcademy;
+
+SELECT e.FirstName +  ISNULL(' ' + e.MiddleName+'. ', ' ') + e.LastName as FullName, e.Salary
+FROM Employees e;
+---
+
+Task07
+---
+use TelerikAcademy;
+
+SELECT e.FirstName +  ISNULL(' ' + e.MiddleName+'. ', ' ') + e.LastName as FullName
+FROM Employees e;
+---
+
+Task08
+---
+use TelerikAcademy;
+
+SELECT CONCAT(e.FirstName, '.', e.LastName, '@telerik.com') AS 'Full Email Addresses'
+FROM Employees e;
+---
+
+Task09
+---
+use TelerikAcademy;
+
+SELECT Salary
+FROM Employees
+GROUP BY Salary 
+---
+
+Task10
+---
+use TelerikAcademy;
+
+SELECT e.FirstName + ISNULL(' ' + e.MiddleName+'. ', ' ') + e.LastName as FullName, e.JobTitle, d.Name AS DepartmentName, HireDate, Salary, a.AddressText AS Address
+FROM Employees e
+	JOIN Addresses a
+	ON e.AddressID = a.AddressID 
+	JOIN Departments d
+	ON e.DepartmentID = d.DepartmentID
+WHERE e.JobTitle LIKE 'Sales Representative';
+---
+
+Task11
+---
+use TelerikAcademy;
+
+SELECT FirstName, LastName, MiddleName
+FROM Employees
+WHERE FirstName LIKE 'SA%';
+---
+
+Task12
+---
+use TelerikAcademy;
+
+SELECT FirstName, LastName, MiddleName
+FROM Employees
+WHERE LastName LIKE '%ei%';
+---
+
+Task13
+---
+use TelerikAcademy;
+
+SELECT FirstName, LastName, MiddleName
+FROM Employees
+WHERE Salary >= 20000 AND Salary <=30000;
+---
+
+Task14
+---
+use TelerikAcademy;
+
+SELECT FirstName, LastName, MiddleName
+FROM Employees
+WHERE Salary IN(25000, 14000, 12500, 23600)
+---
+
+Task15
+---
+use TelerikAcademy;
+
+SELECT *
+FROM Employees
+WHERE ManagerID IS NULL;
+---
+
+Task16
+---
+use TelerikAcademy;
+
+SELECT *
+FROM Employees
+WHERE Salary > 50000
+ORDER BY Salary DESC
+---
+
+Task17
+---
+use TelerikAcademy;
+
+SELECT TOP 5 *
+FROM Employees
+ORDER BY Salary DESC
+---
+
+Task18
+---
+use TelerikAcademy;
+
+SELECT e.FirstName, e.LastName, e.MiddleName, e.JobTitle, a.AddressText 
+FROM Employees e
+INNER JOIN Addresses a
+	ON e.AddressID = a.AddressID
+
+---
+
+Task19
+---
+use TelerikAcademy;
+
+SELECT FirstName, LastName, JobTitle, a.AddressText
+FROM Employees e, Addresses a
+WHERE e.AddressID = a.AddressID
+---
+
+Task20
+---
+use TelerikAcademy;
+
+SELECT e.FirstName, e.LastName, e.JobTitle, m.FirstName, m.LastName, m.JobTitle
+FROM Employees e
+INNER JOIN Employees m
+	ON e.ManagerID = m.EmployeeID
+---
+
+Task21
+---
+use TelerikAcademy;
+
+SELECT e.FirstName, e.LastName, e.JobTitle, a.AddressText AS EmplAddress, m.FirstName, m.LastName, m.JobTitle, manA.AddressText AS ManAddress
+FROM Employees e
+INNER JOIN Employees m
+	ON e.ManagerID = m.EmployeeID
+INNER JOIN Addresses a
+	ON e.AddressID = a.AddressID
+INNER JOIN Addresses manA
+	ON m.AddressID = manA.AddressID
+
+---
+
+Task22
+---
+use TelerikAcademy;
+
+SELECT Name
+FROM Departments
+UNION
+SELECT Name
+FROM Towns
+---
+
+Task23
+---
+use TelerikAcademy;
+
+SELECT emp.FirstName + ' ' + emp.LastName AS EmpName, man.FirstName + ' ' + man.LastName AS ManName
+FROM Employees man
+	RIGHT OUTER JOIN Employees emp
+	ON emp.ManagerID = man.EmployeeID
+	
+use TelerikAcademy;
+
+SELECT emp.FirstName + ' ' + emp.LastName AS EmpName, man.FirstName + ' ' + man.LastName AS ManName
+FROM Employees emp
+	LEFT OUTER JOIN Employees man
+	ON emp.ManagerID = man.EmployeeID
+---
+
+Task24
+---
+use TelerikAcademy;
+
+SELECT e.FirstName + ' ' + e.LastName AS FullName, d.Name, e.HireDate
+FROM Employees e
+	INNER JOIN Departments d
+	ON e.DepartmentID = d.DepartmentID
+	WHERE d.Name IN('Sales', 'Finance') 
+	AND (YEAR(e.HireDate) > 1995 AND YEAR(e.HireDate) < 2005)
+
+---

@@ -1,0 +1,65 @@
+﻿body div#container {
+    width: 450px;
+    background-color: #EEEEEE;
+    border-radius: 8px;
+    padding: 1px 5px 10px 10px;
+}
+
+    body div#container h3 {
+        font-family: Verdana;
+        font-weight: normal;
+    }
+
+body section article > div {
+    border: 1px solid black;
+    width: 90%;
+    background-color: white;
+    padding: 15px;
+    margin-top:30px;
+}
+
+li.button {
+    list-style-type: none;
+    float: right;
+    margin: 10px 5px 0 0;
+}
+
+.button a {
+    text-decoration: none;
+    color: white;
+    padding: 0 25px 0 25px;
+}
+
+    .button a:hover {
+        text-decoration: underline;
+    }
+
+.clearfix {
+    zoom: 1;
+}
+
+    .clearfix:after {
+        content: "";
+        display: block;
+        clear: both;
+        height: 0;
+    }
+
+.text {
+    float: left;
+    width: 60%;
+}
+
+.image {
+    float: left;
+    padding-right: 15px;
+}
+
+.button {
+    border-top: 2px solid #E38382;
+    border-right: 2px solid #650000;
+    border-bottom: 2px solid #650000;
+    border-left: 2px solid #9C2829;
+    background: #f00;
+    box-shadow: inset 15px 0 0 #8A0000;
+}

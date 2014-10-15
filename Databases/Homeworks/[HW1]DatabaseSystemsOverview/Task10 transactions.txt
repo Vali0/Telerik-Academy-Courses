@@ -1,0 +1,10 @@
+Transactions are sequence of database operations which are executed as single unit.
+If one of the operations failed all transaction fails and doesn't change database.
+If all the operations succeed transaction is executed and make changes in database. 
+
+Transactions guarantee the consistency and the integrity of the database.
+	All changes in a transaction are temporary.
+	Changes become final when COMMIT is successfully executed.
+	At any time all changes done in the transaction can be canceled by executing ROLLBACK.
+All operations are executed as a single unit.
+	Either all of them pass or none of them.

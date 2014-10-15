@@ -1,0 +1,131 @@
+﻿html,
+body,
+div,
+h1,
+label,
+input,
+ul,
+li,
+button {
+  padding: 0;
+  margin: 0;
+}
+::-webkit-input-placeholder {
+  color: black;
+  font-style: italic;
+}
+body {
+  font-size: 14px;
+  font-family: Corbel;
+}
+body div#root {
+  width: 350px;
+  border-top: 3px solid black;
+  border-left: 3px solid black;
+  border-top-left-radius: 15px;
+  margin: 5px;
+  padding-right: 25px;
+  padding-bottom: 25px;
+}
+body div#root h1 {
+  font-size: 1.9em;
+  margin: 15px 0 20px 70px;
+}
+body div#root div.widget {
+  margin-left: 25px;
+}
+body div#root div.widget div.box.add-employee {
+  background: #cbf7be;
+  /* Old browsers */
+  background: -moz-linear-gradient(top, #cbf7be 0%, #e5d96e 100%);
+  /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #cbf7be), color-stop(100%, #e5d96e));
+  /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(top, #cbf7be 0%, #e5d96e 100%);
+  /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(top, #cbf7be 0%, #e5d96e 100%);
+  /* Opera 11.10+ */
+  background: -ms-linear-gradient(top, #cbf7be 0%, #e5d96e 100%);
+  /* IE10+ */
+  background: linear-gradient(to bottom, #cbf7be 0%, #e5d96e 100%);
+  /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#cbf7be', endColorstr='#e5d96e', GradientType=0);
+  /* IE6-9 */
+  width: 290px;
+  border: 1px solid black;
+  border-radius: 5px;
+  text-align: center;
+  padding-top: 15px;
+}
+body div#root div.widget div.box.add-employee label:nth-of-type(1),
+body div#root div.widget div.box.add-employee label:nth-of-type(2) {
+  margin-left: 20px;
+  margin-right: 5px;
+}
+body div#root div.widget div.box.add-employee label {
+  font-weight: bold;
+}
+body div#root div.widget div.box.add-employee input {
+  border-radius: 5px;
+  border-width: 3px;
+  padding: 5px 0 5px 10px;
+  margin-bottom: 5px;
+}
+body div#root div.widget div.box.add-employee input:first-of-type {
+  background: #cbf7be;
+  /* Old browsers */
+  background: -moz-linear-gradient(top, #cbf7be 0%, #cff2b1 100%);
+  /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #cbf7be), color-stop(100%, #cff2b1));
+  /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(top, #cbf7be 0%, #cff2b1 100%);
+  /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(top, #cbf7be 0%, #cff2b1 100%);
+  /* Opera 11.10+ */
+  background: -ms-linear-gradient(top, #cbf7be 0%, #cff2b1 100%);
+  /* IE10+ */
+  background: linear-gradient(to bottom, #cbf7be 0%, #cff2b1 100%);
+  /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#cbf7be', endColorstr='#cff2b1', GradientType=0);
+  /* IE6-9 */
+}
+body div#root div.widget div.box.add-employee input:last-of-type {
+  background: #d3eea5;
+  /* Old browsers */
+  background: -moz-linear-gradient(top, #d3eea5 0%, #dae58f 100%);
+  /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #d3eea5), color-stop(100%, #dae58f));
+  /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(top, #d3eea5 0%, #dae58f 100%);
+  /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(top, #d3eea5 0%, #dae58f 100%);
+  /* Opera 11.10+ */
+  background: -ms-linear-gradient(top, #d3eea5 0%, #dae58f 100%);
+  /* IE10+ */
+  background: linear-gradient(to bottom, #d3eea5 0%, #dae58f 100%);
+  /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#d3eea5', endColorstr='#dae58f', GradientType=0);
+  /* IE6-9 */
+}
+body div#root div.widget div.box.add-employee div.dropdown:active ul li {
+  display: block;
+}
+body div#root div.widget div.box.add-employee div.dropdown {
+  position: relative;
+}
+body div#root div.widget div.box.add-employee div.dropdown ul {
+  list-style-type: none;
+  position: absolute;
+  right: 20px;
+}
+body div#root div.widget div.box.add-employee div.dropdown ul li {
+  display: none;
+}
+body div#root div.widget div.box.add-employee button {
+  border-radius: 5px;
+  border-width: 3px;
+  padding: 5px 120px;
+  background: #E5D96E;
+  margin-bottom: 15px;
+}
+/*# sourceMappingURL=style.css.map */

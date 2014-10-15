@@ -1,0 +1,44 @@
+﻿body {
+}
+
+table {
+    border-collapse: collapse;
+    font-size: 18px;
+    font-family: Calibri;
+}
+
+    table th, td {
+        border: 1px solid grey;
+        padding-left: 6px;
+    }
+
+thead th {
+    background-color: #57ee17;
+    text-align: left;
+    font-size: 20px;
+    color: white;
+}
+
+tbody td {
+    padding-right: 60px;
+}
+
+tr:nth-child(even) {
+    background-color: whitesmoke;
+}
+
+input[type="checkbox"] {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    height: 16px;
+    width: 16px;
+    opacity: 0.6;
+}
+
+span {
+    padding-left: 8px;
+}
+
+img {
+    width: 25px;
+}

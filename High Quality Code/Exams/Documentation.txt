@@ -1,0 +1,44 @@
+Design pattern: Simple Factory
+	* factory over computer creation
+	- Computer
+	- HpFactory
+	- DellFactory
+
+Design pattern: Strategy
+	* 
+
+Design pattern: Template Method
+	* 
+
+Design pattern: Abstract factory
+	* 
+
+Design pattern: Composite
+	* 
+
+Design pattern: Mediator
+	* 
+
+Found bottlenecks:
+	* generating random number
+	* I solve this one during refactoring
+
+Found bugs:
+	* battery status % at the end
+	* I solve this during refactoring
+	* I solve this during refactoring
+
+Single responsibility principle
+	* All classes and methods are with loose coupling and strong cohesion
+
+Open/closed principle
+	* All classes are encapsulated.
+
+Liskov substitution principle
+	* 
+
+Interface segregation principle
+	* IMotherboard
+
+Dependency inversion principle
+	* CPU Doesn't know about VideoCard

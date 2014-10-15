@@ -1,0 +1,63 @@
+﻿body header nav ul {
+    list-style-type: none;
+    font-size: 1.4em;
+    padding-left: 140px;
+}
+
+    body header nav ul li {
+        display: inline-block;
+    }
+
+hr {
+    width: 700px;
+}
+
+body section {
+    border: 1px solid black;
+    padding: 10px;
+    float: left;
+    margin-right: 20px;
+}
+
+    body section form fieldset {
+        width: 200px;
+        border: 1px solid black;
+    }
+
+body aside form p span {
+    padding-left: 20px;
+}
+
+fieldset:nth-of-type(2n) {
+    float: left;
+}
+
+fieldset:nth-of-type(2n+1) {
+    clear: left;
+    float: left;
+}
+
+div.parameters {
+    display: inline-block;
+}
+
+div.image {
+    display: inline-block;
+}
+
+div.price {
+    float: right;
+    margin-right: 5px;
+}
+
+.price span {
+    padding-left: 10px;
+}
+
+.parameters p {
+    margin: 5px;
+}
+
+body aside {
+    padding-top: 50px;
+}

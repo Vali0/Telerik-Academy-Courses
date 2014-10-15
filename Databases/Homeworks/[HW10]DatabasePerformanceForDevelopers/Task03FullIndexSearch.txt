@@ -1,0 +1,10 @@
+USE Performance
+GO
+
+DROP INDEX Logs.IDX_Logs_LogDate
+
+CREATE INDEX IDX_Logs_MsgText ON Logs(LogText)
+	
+SELECT l.LogText
+FROM Logs l
+WHERE l.LogDate BETWEEN 2001 AND 2012

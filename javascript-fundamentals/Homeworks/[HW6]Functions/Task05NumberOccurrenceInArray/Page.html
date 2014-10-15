@@ -1,0 +1,24 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title></title>
+        <style>
+            input
+            {
+                display: block;
+            }
+        </style>
+    </head>
+    <body>
+        <form>
+            <label>Enter your array (separated by ", " comma and interval): </label>
+            <input type="text" class="user-input" />
+            <label>Enter number to count</label>
+            <input type="text" class="user-input" maxlength="9" />
+            <input type="button" onclick="handleUserInput()" value="Count number appearens" />
+            <input type="button" onclick="randomInput()" value="Run test function" />
+        </form>
+        <div id="result"></div>
+        <script src="script.js"></script>
+    </body>
+</html>

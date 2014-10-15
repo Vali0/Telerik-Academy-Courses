@@ -1,0 +1,57 @@
+﻿table {
+    background-color: grey;
+    width: auto;
+    font-family: Calibri;
+}
+
+    table td {
+        padding: 3px;
+        width: 250px;
+    }
+
+thead th {
+    color: #B1B1B1;
+    font-size: 24px;
+    text-align: left;
+    font-weight: 100;
+}
+
+table td.left {
+    color: lightblue;
+    width: 130px;
+    font-style: italic;
+    font-weight: bold;
+}
+
+table td#lastAction {
+    vertical-align: top;
+}
+
+a {
+    text-decoration: none;
+    color: bisque;
+}
+
+
+.circle {
+    font-size: 28px;
+    color: mediumseagreen;
+}
+
+.red {
+    font-weight: bold;
+    padding-top: 0;
+    color: red;
+    padding-bottom: 12px;
+}
+
+.orange {
+    font-weight: bold;
+    font: bold;
+    color: orange;
+}
+
+.status {
+    font-weight: bold;
+    color: #B1B1B1;
+}

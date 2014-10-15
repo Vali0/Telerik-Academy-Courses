@@ -1,0 +1,29 @@
+﻿div
+{
+    border: 1px solid black;
+}
+
+#slider
+{
+    width: 800px;
+    height: 600px;
+    text-align: center;
+}
+
+#current-slide
+{
+    margin: 0 auto;
+    margin-top: 10px;
+    width: 700px;
+    height: 550px;
+}
+
+article
+{
+    text-align: left;
+}
+
+ul
+{
+    list-style-type: none;
+}

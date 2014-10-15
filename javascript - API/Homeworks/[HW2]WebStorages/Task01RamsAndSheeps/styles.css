@@ -1,0 +1,13 @@
+﻿#container {
+  display: inline-block;
+}
+#container #info {
+  display: block;
+}
+#container #options {
+  margin-top: 10px;
+}
+#container #hcTable {
+  display: none;
+}
+/*# sourceMappingURL=styles.css.map */

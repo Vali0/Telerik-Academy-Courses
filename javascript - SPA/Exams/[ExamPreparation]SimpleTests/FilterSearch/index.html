@@ -1,0 +1,31 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title></title>
+        <script src="libs/angular.js"></script>
+        <script src="libs/angular-route.js"></script>
+    </head>
+    <body ng-app="app">
+        <label>Search: </label>
+        <input type="text" placeholder="Search" ng-model="searchText" />
+        <ul ng-controller="phoneBookController">
+            <li ng-repeat="friend in friends | filter:searchText">
+                <span>{{friend.name}} - {{friend.phone}}</span>
+            </li>
+        </ul>
+
+        <hr />
+        
+        <label>By name: </label>
+        <input type="text" placeholder="Search by name" ng-model="search.name" />
+        <label>By phone: </label>
+        <input type="text" placeholder="Search by phone" ng-model="search.phone" />
+        <ul ng-controller="phoneBookController">
+            <li ng-repeat="friend in friends | filter:search">
+                <span>{{friend.name}} - {{friend.phone}}</span>
+            </li>
+        </ul>
+        <script src="modules/app.js"></script>
+        <script src="controllers/phoneBookController.js"></script>
+    </body>
+</html>

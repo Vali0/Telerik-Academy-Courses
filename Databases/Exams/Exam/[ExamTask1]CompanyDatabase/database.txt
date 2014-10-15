@@ -1,0 +1,191 @@
+USE [master]
+GO
+/****** Object:  Database [CompanyDatabase]    Script Date: 08/09/2014 12:29:42 ******/
+CREATE DATABASE [CompanyDatabase]
+GO
+
+ALTER DATABASE [CompanyDatabase] SET COMPATIBILITY_LEVEL = 110
+GO
+IF (1 = FULLTEXTSERVICEPROPERTY('IsFullTextInstalled'))
+begin
+EXEC [CompanyDatabase].[dbo].[sp_fulltext_database] @action = 'enable'
+end
+GO
+ALTER DATABASE [CompanyDatabase] SET ANSI_NULL_DEFAULT OFF 
+GO
+ALTER DATABASE [CompanyDatabase] SET ANSI_NULLS OFF 
+GO
+ALTER DATABASE [CompanyDatabase] SET ANSI_PADDING OFF 
+GO
+ALTER DATABASE [CompanyDatabase] SET ANSI_WARNINGS OFF 
+GO
+ALTER DATABASE [CompanyDatabase] SET ARITHABORT OFF 
+GO
+ALTER DATABASE [CompanyDatabase] SET AUTO_CLOSE OFF 
+GO
+ALTER DATABASE [CompanyDatabase] SET AUTO_CREATE_STATISTICS ON 
+GO
+ALTER DATABASE [CompanyDatabase] SET AUTO_SHRINK OFF 
+GO
+ALTER DATABASE [CompanyDatabase] SET AUTO_UPDATE_STATISTICS ON 
+GO
+ALTER DATABASE [CompanyDatabase] SET CURSOR_CLOSE_ON_COMMIT OFF 
+GO
+ALTER DATABASE [CompanyDatabase] SET CURSOR_DEFAULT  GLOBAL 
+GO
+ALTER DATABASE [CompanyDatabase] SET CONCAT_NULL_YIELDS_NULL OFF 
+GO
+ALTER DATABASE [CompanyDatabase] SET NUMERIC_ROUNDABORT OFF 
+GO
+ALTER DATABASE [CompanyDatabase] SET QUOTED_IDENTIFIER OFF 
+GO
+ALTER DATABASE [CompanyDatabase] SET RECURSIVE_TRIGGERS OFF 
+GO
+ALTER DATABASE [CompanyDatabase] SET  DISABLE_BROKER 
+GO
+ALTER DATABASE [CompanyDatabase] SET AUTO_UPDATE_STATISTICS_ASYNC OFF 
+GO
+ALTER DATABASE [CompanyDatabase] SET DATE_CORRELATION_OPTIMIZATION OFF 
+GO
+ALTER DATABASE [CompanyDatabase] SET TRUSTWORTHY OFF 
+GO
+ALTER DATABASE [CompanyDatabase] SET ALLOW_SNAPSHOT_ISOLATION OFF 
+GO
+ALTER DATABASE [CompanyDatabase] SET PARAMETERIZATION SIMPLE 
+GO
+ALTER DATABASE [CompanyDatabase] SET READ_COMMITTED_SNAPSHOT OFF 
+GO
+ALTER DATABASE [CompanyDatabase] SET HONOR_BROKER_PRIORITY OFF 
+GO
+ALTER DATABASE [CompanyDatabase] SET RECOVERY SIMPLE 
+GO
+ALTER DATABASE [CompanyDatabase] SET  MULTI_USER 
+GO
+ALTER DATABASE [CompanyDatabase] SET PAGE_VERIFY CHECKSUM  
+GO
+ALTER DATABASE [CompanyDatabase] SET DB_CHAINING OFF 
+GO
+ALTER DATABASE [CompanyDatabase] SET FILESTREAM( NON_TRANSACTED_ACCESS = OFF ) 
+GO
+ALTER DATABASE [CompanyDatabase] SET TARGET_RECOVERY_TIME = 0 SECONDS 
+GO
+USE [CompanyDatabase]
+GO
+/****** Object:  Table [dbo].[Departments]    Script Date: 08/09/2014 12:29:43 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE TABLE [dbo].[Departments](
+	[DepartmentId] [int] IDENTITY(1,1) NOT NULL,
+	[Name] [nvarchar](50) NOT NULL,
+ CONSTRAINT [PK_Departments] PRIMARY KEY CLUSTERED 
+(
+	[DepartmentId] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+) ON [PRIMARY]
+
+GO
+/****** Object:  Table [dbo].[Employees]    Script Date: 08/09/2014 12:29:43 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE TABLE [dbo].[Employees](
+	[EmployeeId] [int] IDENTITY(1,1) NOT NULL,
+	[FirstName] [nvarchar](20) NOT NULL,
+	[LastName] [nvarchar](20) NOT NULL,
+	[YearSalary] [money] NOT NULL,
+	[ManagerId] [int] NULL,
+	[DepartmentId] [int] NOT NULL,
+ CONSTRAINT [PK_Employees] PRIMARY KEY CLUSTERED 
+(
+	[EmployeeId] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+) ON [PRIMARY]
+
+GO
+/****** Object:  Table [dbo].[Employees_Projects]    Script Date: 08/09/2014 12:29:43 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE TABLE [dbo].[Employees_Projects](
+	[EmployeeId] [int] NOT NULL,
+	[ProjectId] [int] NOT NULL,
+ CONSTRAINT [PK_Employees_Projects] PRIMARY KEY CLUSTERED 
+(
+	[EmployeeId] ASC,
+	[ProjectId] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+) ON [PRIMARY]
+
+GO
+/****** Object:  Table [dbo].[Projects]    Script Date: 08/09/2014 12:29:43 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE TABLE [dbo].[Projects](
+	[ProjectId] [int] IDENTITY(1,1) NOT NULL,
+	[Name] [nvarchar](50) NOT NULL,
+	[StartDate] [datetime] NOT NULL,
+	[EndDate] [datetime] NOT NULL,
+ CONSTRAINT [PK_Projects] PRIMARY KEY CLUSTERED 
+(
+	[ProjectId] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+) ON [PRIMARY]
+
+GO
+/****** Object:  Table [dbo].[Reports]    Script Date: 08/09/2014 12:29:43 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE TABLE [dbo].[Reports](
+	[ReportId] [int] IDENTITY(1,1) NOT NULL,
+	[Date] [datetime] NOT NULL,
+	[EmployeeId] [int] NOT NULL,
+ CONSTRAINT [PK_Reports] PRIMARY KEY CLUSTERED 
+(
+	[ReportId] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+) ON [PRIMARY]
+
+GO
+/****** Object:  Index [IX_Departments]    Script Date: 08/09/2014 12:29:43 ******/
+CREATE UNIQUE NONCLUSTERED INDEX [IX_Departments] ON [dbo].[Departments]
+(
+	[DepartmentId] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, SORT_IN_TEMPDB = OFF, IGNORE_DUP_KEY = OFF, DROP_EXISTING = OFF, ONLINE = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+GO
+ALTER TABLE [dbo].[Employees]  WITH CHECK ADD  CONSTRAINT [FK_Employees_Departments] FOREIGN KEY([DepartmentId])
+REFERENCES [dbo].[Departments] ([DepartmentId])
+GO
+ALTER TABLE [dbo].[Employees] CHECK CONSTRAINT [FK_Employees_Departments]
+GO
+ALTER TABLE [dbo].[Employees]  WITH CHECK ADD  CONSTRAINT [FK_Employees_Employees] FOREIGN KEY([ManagerId])
+REFERENCES [dbo].[Employees] ([EmployeeId])
+GO
+ALTER TABLE [dbo].[Employees] CHECK CONSTRAINT [FK_Employees_Employees]
+GO
+ALTER TABLE [dbo].[Employees_Projects]  WITH CHECK ADD  CONSTRAINT [FK_Employees_Projects_Employees] FOREIGN KEY([EmployeeId])
+REFERENCES [dbo].[Employees] ([EmployeeId])
+GO
+ALTER TABLE [dbo].[Employees_Projects] CHECK CONSTRAINT [FK_Employees_Projects_Employees]
+GO
+ALTER TABLE [dbo].[Employees_Projects]  WITH CHECK ADD  CONSTRAINT [FK_Employees_Projects_Projects] FOREIGN KEY([ProjectId])
+REFERENCES [dbo].[Projects] ([ProjectId])
+GO
+ALTER TABLE [dbo].[Employees_Projects] CHECK CONSTRAINT [FK_Employees_Projects_Projects]
+GO
+ALTER TABLE [dbo].[Reports]  WITH CHECK ADD  CONSTRAINT [FK_Reports_Employees] FOREIGN KEY([EmployeeId])
+REFERENCES [dbo].[Employees] ([EmployeeId])
+GO
+ALTER TABLE [dbo].[Reports] CHECK CONSTRAINT [FK_Reports_Employees]
+GO
+USE [master]
+GO
+ALTER DATABASE [CompanyDatabase] SET  READ_WRITE 
+GO

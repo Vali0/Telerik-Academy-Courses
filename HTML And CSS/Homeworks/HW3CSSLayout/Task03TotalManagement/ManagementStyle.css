@@ -1,0 +1,45 @@
+﻿body div#member-management {
+    width: 637px;
+    background: #3B3B3B;
+    color: #A9A9A9;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+body div header form input, button {
+    margin-left: 15px;
+    padding-left: 10px;
+}
+
+body div section article h1 {
+    color: #ffd800;
+    font-size: 1.7em;
+}
+
+body div section article p {
+    margin: 3px;
+}
+
+    body div section article p strong {
+        color: white;
+    }
+
+.member-login {
+    padding: 20px 10px 20px 70px;
+    color: #fff;
+    font-size: 1.2em;
+    font-weight: bold;
+    background: url(monitor.png) no-repeat 16px 9px, -moz-radial-gradient(ellipse farthest-corner, transparent 0, #343434 60% ) no-repeat 55% 155%;
+    background: url(monitor.png) no-repeat 16px 9px, -webkit-radial-gradient(ellipse farthest-corner, transparent 0, #343434 60% ) no-repeat 55% 155%;
+    background: url(monitor.png) no-repeat 16px 9px, -o-radial-gradient(ellipse farthest-corner, transparent 0, #343434 60% ) no-repeat 55% 155%;
+    background: url(monitor.png) no-repeat 16px 9px, radial-gradient(ellipse farthest-corner, transparent 0, #343434 60% ) no-repeat 55% 155%;
+    background-color: #343434;
+}
+
+.go-button {
+    background: url(button.png) no-repeat;
+    height: 37px;
+    width: 63px;
+    border: none;
+    color: white;
+}

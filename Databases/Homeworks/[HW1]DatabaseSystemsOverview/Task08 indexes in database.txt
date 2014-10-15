@@ -1,0 +1,5 @@
+Indexes speed up searching of values in a certain column or group of columns.
+Usually implemented as B-trees.
+Indexes can be built-in the table (clustered) or stored externally (non-clustered).
+Adding and deleting records in indexed tables is slower!
+Indexes should be used for big tables only (e.g. 50 000 rows).

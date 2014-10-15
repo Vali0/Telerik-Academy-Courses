@@ -1,0 +1,56 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <script src="Scripts/jquery-2.1.1.min.js"></script>
+    <script src="Scripts/handlebars.min.js"></script>
+    <style>
+        table {
+            border-collapse: collapse;
+        }
+
+        th {
+            border: 1px solid black;
+            color: white;
+            background-color: #AAA;
+            padding: 0 5px;
+        }
+
+        td {
+            border: 1px solid black;
+            padding: 0 5px;
+        }
+
+        tr:nth-child(2n) {
+            background-color: #DDD;
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+    </div>
+    <script id="table-template" type="text/x-handelbars-template">
+        <table cellspacing="0">
+            <thead>
+                <tr>
+                    <th>N:</th>
+                    {{#each header.fields}}
+                    <th>{{name}}</th>
+                    {{/each}}
+                </tr>
+            </thead>
+            <tbody>
+                {{#each rows}}
+                <tr>
+                    <td>{{@index}}</td>
+                    {{#each fields}}
+                    <td>{{content}}</td>
+                    {{/each}}
+                </tr>
+                {{/each}}
+            </tbody>
+        </table>
+    </script>
+    <script src="Scripts/table-template.js"></script>
+</body>
+</html>

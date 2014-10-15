@@ -1,0 +1,17 @@
+﻿body #back-button {
+  text-decoration: none;
+}
+body #table-container table {
+  float: left;
+  border: 1px solid black;
+  border-collapse: collapse;
+  text-align: center;
+  margin: 10px 10px 0 0;
+}
+body #table-container table tr th {
+  border: 1px solid black;
+}
+body #table-container table tr td {
+  border: 1px solid black;
+}
+/*# sourceMappingURL=styles.css.map */

@@ -1,0 +1,40 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.30501.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Task01SelectAllDirectDivNodes", "Task01SelectAllDirectDivNodes\Task01SelectAllDirectDivNodes.csproj", "{5EEFB490-D785-4C64-90AD-E19FE606529D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Task02GetValueFromTextField", "Task02GetValueFromTextField\Task02GetValueFromTextField.csproj", "{FA6B3305-39F0-4B5B-A38C-3F6E22D511CC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Task03ChangeBackgroundColor", "Task03ChangeBackgroundColor\Task03ChangeBackgroundColor.csproj", "{08C2CA0B-11FE-4F13-8D9A-E5606F7FD51C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Task04QuerySelectorShim", "Task04QuerySelectorShim\Task04QuerySelectorShim.csproj", "{4441F5FE-76BC-45DA-AC96-ED49125CF545}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{5EEFB490-D785-4C64-90AD-E19FE606529D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5EEFB490-D785-4C64-90AD-E19FE606529D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5EEFB490-D785-4C64-90AD-E19FE606529D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5EEFB490-D785-4C64-90AD-E19FE606529D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FA6B3305-39F0-4B5B-A38C-3F6E22D511CC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FA6B3305-39F0-4B5B-A38C-3F6E22D511CC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FA6B3305-39F0-4B5B-A38C-3F6E22D511CC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FA6B3305-39F0-4B5B-A38C-3F6E22D511CC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{08C2CA0B-11FE-4F13-8D9A-E5606F7FD51C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{08C2CA0B-11FE-4F13-8D9A-E5606F7FD51C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{08C2CA0B-11FE-4F13-8D9A-E5606F7FD51C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{08C2CA0B-11FE-4F13-8D9A-E5606F7FD51C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4441F5FE-76BC-45DA-AC96-ED49125CF545}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4441F5FE-76BC-45DA-AC96-ED49125CF545}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4441F5FE-76BC-45DA-AC96-ED49125CF545}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4441F5FE-76BC-45DA-AC96-ED49125CF545}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.30501.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Task01MaxSum", "Task01MaxSum\Task01MaxSum.csproj", "{5320C97B-9F15-49BC-B7EB-E74C26F122AF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Task02LabirynthEscape", "Task02LabirynthEscape\Task02LabirynthEscape.csproj", "{5DE220EC-0293-4A10-8301-DF61D1FBD541}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Task03Listy", "Task03Listy\Task03Listy.csproj", "{C35F9EF9-A2D9-498C-91AC-DA9319060B84}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{5320C97B-9F15-49BC-B7EB-E74C26F122AF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5320C97B-9F15-49BC-B7EB-E74C26F122AF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5320C97B-9F15-49BC-B7EB-E74C26F122AF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5320C97B-9F15-49BC-B7EB-E74C26F122AF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5DE220EC-0293-4A10-8301-DF61D1FBD541}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5DE220EC-0293-4A10-8301-DF61D1FBD541}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5DE220EC-0293-4A10-8301-DF61D1FBD541}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5DE220EC-0293-4A10-8301-DF61D1FBD541}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C35F9EF9-A2D9-498C-91AC-DA9319060B84}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C35F9EF9-A2D9-498C-91AC-DA9319060B84}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C35F9EF9-A2D9-498C-91AC-DA9319060B84}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C35F9EF9-A2D9-498C-91AC-DA9319060B84}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

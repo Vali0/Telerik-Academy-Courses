@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.30723.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IntroToAngular", "IntroToAngular\IntroToAngular.csproj", "{F2751F59-C8CC-464E-BED9-27EB85380759}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FilterSearch", "FilterSearch\FilterSearch.csproj", "{99F0F852-8AD8-4314-B2AA-EC310743CFF4}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F2751F59-C8CC-464E-BED9-27EB85380759}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F2751F59-C8CC-464E-BED9-27EB85380759}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F2751F59-C8CC-464E-BED9-27EB85380759}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F2751F59-C8CC-464E-BED9-27EB85380759}.Release|Any CPU.Build.0 = Release|Any CPU
+		{99F0F852-8AD8-4314-B2AA-EC310743CFF4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{99F0F852-8AD8-4314-B2AA-EC310743CFF4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{99F0F852-8AD8-4314-B2AA-EC310743CFF4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{99F0F852-8AD8-4314-B2AA-EC310743CFF4}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,34 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <style>
+        div {
+            border:5px solid red;
+            margin:15px;
+        }
+        span, p {
+            border: 5px solid black;
+        }
+    </style>
+</head>
+<body>
+    <h1>Red ones are divs other are span and p elements</h1>
+    <div>
+        <div>
+            <p>
+                <div></div>
+            </p>
+        </div>
+    </div>
+    <p>
+        <div>
+            <span></span>
+        </div>
+        <div></div>
+    </p>
+    <div></div>
+    <p id="result"></p>
+    <script src="script.js"></script>
+</body>
+</html>

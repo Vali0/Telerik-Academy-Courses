@@ -1,0 +1,28 @@
+﻿<ul ng-controller="navigationController">
+    <li>
+        <a href="/#">Home</a>
+    </li>
+    <li ng-hide="isLogged()">
+        <a href="/#/signin">Login</a>
+    </li>
+    <li ng-show="isLogged()">
+        <a href="/#/signout">LogOut</a>
+    </li>
+    <li ng-show="isLogged()">
+        <input type="button" value="{{showHideBtn}}" ng-click="showUser()" />
+        <div ng-show="isUserShown">
+            User Info: <span>{{userInfo.email}}</span>
+            <span ng-if="userInfo.isDriver">{{userInfo.isDriver}}</span>
+            <span ng-if="userInfo.car">{{userInfo.car}}</span>
+        </div>
+    </li>
+    <li ng-hide="isLogged()">
+        <a href="/#/signup">Register</a>
+    </li>
+    <li>
+        <a href="/#/trips">Trips</a>
+    </li>
+    <li>
+        <a href="/#/drivers">Drivers</a>
+    </li>
+</ul>

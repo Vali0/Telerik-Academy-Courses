@@ -1,0 +1,5 @@
+They're four types of databases:
+	Hierarchical(tree)
+	Network/graph
+	Relational(table)
+	Object-oriented

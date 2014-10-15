@@ -1,0 +1,30 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title></title>
+        <script src="libs/angular.js"></script>
+        <script src="libs/angular-route.js"></script>
+    </head>
+    <body ng-app="myApp">
+        <ul>
+            <li>
+                <a href="/#/home">Home</a>
+            </li>
+            <li>
+                <a href="/#/news">News</a>
+            </li>
+            <li>
+                <a href="/#/about">About</a>
+            </li>
+        </ul>
+        <div ng-view="">
+        </div>
+        <div home-directive=""></div>
+        <div numbers-directive=""></div>
+        <script src="modules/myApp.js"></script>
+        <script src="controllers/randomNumberController.js"></script>
+        <script src="services/randomNumberGenerator.js"></script>
+        <!--<script src="directives/homeDirective.js"></script>-->
+        <script src="directives/numbersDirective.js"></script>
+    </body>
+</html>

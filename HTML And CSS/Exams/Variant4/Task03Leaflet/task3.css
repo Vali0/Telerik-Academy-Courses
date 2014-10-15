@@ -1,0 +1,58 @@
+﻿html,
+body,
+div,
+hgroup,
+h3,
+h2,
+p,
+a {
+  padding: 0;
+  margin: 0;
+}
+div#wrapper {
+  width: 960px;
+  font-family: Arial, 'DejaVu Sans', 'Liberation Sans', Freesans, sans-serif;
+  font-size: 16px;
+  margin: 20px;
+}
+div#wrapper > div {
+  padding: 5px;
+  border: 2px solid #D3D7DA;
+  float: left;
+  width: 140px;
+}
+div#wrapper > div hgroup h2,
+div#wrapper > div hgroup h3 {
+  font-size: 1.1em;
+}
+div#wrapper > div div a {
+  color: #C72D2F;
+  display: block;
+  text-decoration: none;
+}
+div#wrapper > div:nth-of-type(2n) {
+  background: #ffffff;
+  /* Old browsers */
+  background: -moz-linear-gradient(top, #ffffff 0%, #f1f2f3 100%);
+  /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #ffffff), color-stop(100%, #f1f2f3));
+  /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(top, #ffffff 0%, #f1f2f3 100%);
+  /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(top, #ffffff 0%, #f1f2f3 100%);
+  /* Opera 11.10+ */
+  background: -ms-linear-gradient(top, #ffffff 0%, #f1f2f3 100%);
+  /* IE10+ */
+  background: linear-gradient(to bottom, #ffffff 0%, #f1f2f3 100%);
+  /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffff', endColorstr='#f1f2f3', GradientType=0);
+  /* IE6-9 */
+}
+div#wrapper > div div.yellowBox {
+  border: 1px solid yellow;
+  background: #FFFFDD;
+}
+div#wrapper > div div.yellowBox a {
+  display: inline;
+}
+/*# sourceMappingURL=task3.css.map */

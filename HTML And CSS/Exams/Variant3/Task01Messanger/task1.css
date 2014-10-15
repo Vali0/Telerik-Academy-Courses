@@ -1,0 +1,101 @@
+﻿html,
+body,
+div,
+ul,
+li,
+a,
+span {
+  padding: 0;
+  margin: 0;
+}
+ul {
+  list-style-type: none;
+}
+div#wrapper {
+  width: 960px;
+  font-family: 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', 'DejaVu Sans Condensed', sans-serif;
+  font-size: 16px;
+}
+div#wrapper ul.msg-bar {
+  margin: 205px 50px;
+  position: relative;
+}
+div#wrapper ul.msg-bar > li {
+  border: 1px  solid black;
+  padding: 5px 15px;
+  display: inline-block;
+  background: #aaffef;
+  /* Old browsers */
+  background: -moz-linear-gradient(top, #aaffef 0%, #13ffd2 100%);
+  /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #aaffef), color-stop(100%, #13ffd2));
+  /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(top, #aaffef 0%, #13ffd2 100%);
+  /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(top, #aaffef 0%, #13ffd2 100%);
+  /* Opera 11.10+ */
+  background: -ms-linear-gradient(top, #aaffef 0%, #13ffd2 100%);
+  /* IE10+ */
+  background: linear-gradient(to bottom, #aaffef 0%, #13ffd2 100%);
+  /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#aaffef', endColorstr='#13ffd2', GradientType=0);
+  /* IE6-9 */
+}
+div#wrapper ul.msg-bar > li a {
+  text-decoration: none;
+  color: #0094FF;
+}
+div#wrapper ul.msg-bar > li .msg-bar-content {
+  background: #AAFFEF;
+  display: none;
+  position: absolute;
+  bottom: 35px;
+  width: 430px;
+  left: 0;
+  border: 1px solid black;
+  border-bottom: none;
+  padding: 5px 15px;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+}
+div#wrapper ul.msg-bar > li .msg-bar-content ul {
+  list-style-type: none;
+  text-align: right;
+}
+div#wrapper ul.msg-bar > li .msg-bar-content ul li {
+  margin-top: 5px;
+}
+div#wrapper ul.msg-bar > li .msg-bar-content ul li span {
+  display: block;
+  text-align: right;
+  border-bottom: 1px solid black;
+  margin-left: 100px;
+  padding: 5px 15px;
+}
+div#wrapper ul.msg-bar > li .msg-bar-content ul li span.user {
+  border: 1px solid black;
+  border-radius: 100px;
+  float: left;
+  padding-left: 25px;
+  background-position: 5px center;
+  background-repeat: no-repeat;
+  margin: 0;
+}
+div#wrapper ul.msg-bar > li .msg-bar-content ul li:last-of-type span:not(.user) {
+  border: none;
+}
+div#wrapper ul.msg-bar > li .msg-bar-content ul li.me-item span.user {
+  background-image: url(imgs/me.png);
+  background-repeat: no-repeat;
+}
+div#wrapper ul.msg-bar > li .msg-bar-content ul li.other-item span.user {
+  background-image: url(imgs/male.png);
+}
+div#wrapper ul.msg-bar > li:hover {
+  border-top: none;
+  background: #00DDB3;
+}
+div#wrapper ul.msg-bar > li:hover div.msg-bar-content {
+  display: block;
+}
+/*# sourceMappingURL=task1.css.map */

@@ -1,0 +1,2 @@
+Normalization of the relational schema removes repeating data. Non-normalized schemas can contain many data repetitions.
+Normalization is done by using primary and foreign keys.
